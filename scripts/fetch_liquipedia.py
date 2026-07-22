@@ -1,0 +1,43 @@
+# -*- coding: utf-8 -*-
+"""抓取 Liquipedia OWCS 2026 中国赛区页面 wikitext（MediaWiki API）。
+
+Liquipedia API 使用条款：须带说明性 UA，parse 请求 ≥30s 间隔。
+输出: data/raw/liquipedia_<slug>.json
+"""
+import json
+import time
+from datetime import datetime, timezone
+from pathlib import Path
+
+import requests
+
+API = "https://liquipedia.net/overwatch/api.php"
+UA = "OWMarketingInsight/0.1 (personal research project; contact: zhunmingm@gmail.com)"
+PAGES = [
+    "Overwatch_Champions_Series/2026/China/Stage_1",
+    "Overwatch_Champions_Series/2026/China/Stage_2",
+    "Overwatch_Champions_Series/2026/World_Finals",
+]
+RAW = Path(__file__).resolve().parent.parent / "data" / "raw"
+
+
+def main() -> None:
+    RAW.mkdir(parents=True, exist_ok=True)
+    fetched_at = datetime.now(timezone.utc).isoformat()
+    for i, page in enumerate(PAGES):
+        if i:
+            time.sleep(31)  # API 条款要求
+        r = requests.get(API, params={
+            "action": "parse", "page": page, "prop": "wikitext", "format": "json",
+        }, headers={"User-Agent": UA, "Accept-Encoding": "gzip"}, timeout=30)
+        r.raise_for_status()
+        slug = page.replace("/", "_").lower()
+        (RAW / f"liquipedia_{slug}.json").write_text(
+            json.dumps({"_meta": {"fetched_at": fetched_at, "page": page},
+                        "data": r.json()}, ensure_ascii=False),
+            encoding="utf-8")
+        print(f"[OK] {page}")
+
+
+if __name__ == "__main__":
+    main()
