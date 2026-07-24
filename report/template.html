@@ -237,8 +237,31 @@ footer a:hover{color:var(--org);border-bottom-color:var(--org);transition:color 
   </div>
 </section>
 
+<section id="s6v">
+  <div class="sechead rv"><span class="no">06</span><h2>玩家之声：三个平台，三种声音</h2></div>
+  <p class="selead rv">在内容与赛事数据之外，叠加 <b>261 条 B 站热评 × 小红书三关键词一手扫描 × 知乎长期讨论</b>做玩家痛点研究。最重要的发现不是某条痛点，而是<b>平台分工</b>——同一群玩家在不同平台说完全不同的话。</p>
+  <div class="tl rv" style="grid-template-columns:repeat(3,1fr)">
+    <div class="node"><div class="d">BILIBILI</div><div class="t">梗文化共鸣场</div><div class="s">热评几乎无抱怨：高赞全是梗与二创共鸣（单条最高 1 万+ 赞）。适合做赛事声量与二创企划</div></div>
+    <div class="node"><div class="d">小红书</div><div class="t">求助与吐槽第一现场</div><div class="s">「找搭子/求带」帖是萌新关键词下的绝对主流；回归活动规则吐槽 75–149 赞霸榜。适合做新手承接与官方答疑</div></div>
+    <div class="node"><div class="d">知乎</div><div class="t">结构性反思区</div><div class="s">新手门槛、匹配机制的长文讨论跨年代稳定存在。适合做口碑与深度叙事</div></div>
+  </div>
+  <div class="card rv" style="margin-top:16px;padding:18px 24px">
+    <table>
+      <thead><tr><th scope="col">痛点</th><th scope="col">信号</th><th scope="col">含义</th></tr></thead>
+      <tbody>
+        <tr><td class="ttl"><b>组队/搭子缺口</b></td><td>小红书功能性求助帖高频长尾；付费陪玩生态正在抽走固定队友</td><td>官方无组队/师徒产品，小红书成了事实上的组队大厅</td></tr>
+        <tr><td class="ttl"><b>活动规则沟通</b></td><td>回归奖励规则改动吐槽 75–149 赞；搜索联想被「奖励怎么领」占满</td><td>社区自发做「三分钟看懂」= 官方说明缺位</td></tr>
+        <tr><td class="ttl"><b>新手门槛与环境</b></td><td>三源共现：「队友让我滚回山中去」「新手必开的是关闭聊天」</td><td>结构性留存风险；481 赞入坑指南证明新手内容有真需求</td></tr>
+        <tr><td class="ttl"><b>决策信任</b></td><td>模式收缩不满 134 赞 vs <b>总监坦诚沟通 106 赞</b></td><td>数据里自带对照实验：玩家要的是「改之前说清楚」</td></tr>
+      </tbody>
+    </table>
+    <div class="callout" style="margin-top:14px"><span aria-hidden="true">◇</span><div><b>玩家运营建议（三条，对应上表）：</b>①官方组队与师徒企划，把小红书自发找搭子行为产品化，可与世界总决赛观赛组队联动；②活动规则「一图流」内容线，改动前置公告；③开发者坦诚沟通栏目化——坦诚本身被数据验证有流量。</div></div>
+    <div class="callout"><span aria-hidden="true">⚠</span><div><b>方法边界：</b>B 站为热评样本（匿名可得的每视频前 3 条）；小红书为登录态标题级扫描（约 90 条笔记，未逐篇深读）；知乎为主题级归纳。定性证据，置信度中。</div></div>
+  </div>
+</section>
+
 <section id="s6">
-  <div class="sechead rv"><span class="no">06</span><h2>三条可执行建议 <span style="font-size:13px;color:var(--dim);font-family:'Noto Sans SC'">（v1 草稿 · 全部锚定数据）</span></h2></div>
+  <div class="sechead rv"><span class="no">07</span><h2>营销建议：内容与赛事 <span style="font-size:13px;color:var(--dim);font-family:'Noto Sans SC'">（全部锚定数据）</span></h2></div>
   <div class="recs">
     <div class="rec rv"><span class="anchor">锚点 · 世界总决赛</span><div class="idx num">01</div>
       <h3>赛事二创共创企划</h3>
@@ -256,13 +279,15 @@ footer a:hover{color:var(--org);border-bottom-color:var(--org);transition:color 
 </section>
 
 <section id="s7">
-  <div class="sechead rv"><span class="no">07</span><h2>方法与可信性</h2></div>
+  <div class="sechead rv"><span class="no">08</span><h2>方法与可信性</h2></div>
   <div class="method">
     <div class="mcard rv"><h4>数据源（全部公开）</h4><ul>
       <li>B 站 web 搜索 API：5 关键词 × ≤50 页，视频元数据 3,354 条（原始）</li>
+      <li>B 站热评样本：87 个主题视频 × 前 3 条热评，共 261 条</li>
       <li>Liquipedia：OWCS 2026 中国 Stage 1/2 + 世界总决赛页面 wikitext</li>
       <li>OverFast API：英雄 / 职责 / 地图 / 模式元数据</li>
       <li>管线 <code>Python + DuckDB</code>，一键复现，原始数据含抓取时间戳</li>
+      <li>补充定性源：小红书（标题级扫描）与知乎（主题归纳），仅用于 §06，不入库</li>
     </ul></div>
     <div class="mcard rv"><h4>清洗与边界（诚实优先）</h4><ul>
       <li><code>R1</code> 剔除挂机蹭激励计划视频（11 条）</li>
