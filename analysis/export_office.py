@@ -105,3 +105,6 @@ docx = OUT / f"OW研究更新摘要_{DAY}.docx"
 npm_root = subprocess.run("npm root -g", shell=True, capture_output=True, text=True, check=True).stdout.strip()
 subprocess.run(["node", str(ROOT / "analysis" / "export_docx.js"), str(ROOT / "report" / "data.json"), str(docx)],
                check=True, env={**os.environ, "NODE_PATH": npm_root})
+# 视频脚本（同一份数据）
+subprocess.run(["node", str(ROOT / "analysis" / "export_video_script.js")], check=True,
+               env={**os.environ, "NODE_PATH": npm_root})

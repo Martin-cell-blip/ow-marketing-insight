@@ -67,7 +67,7 @@ python analysis/code_comments_2026-10-15.py   # 人工复核记录 → comment_r
 python analysis/analyze_update.py        # 再跑一次，汇入复核结果
 python analysis/build_report_data.py     # → report/data.json（合并计算结果、来源表与研究判断）
 python report/build_report.py            # → report/index.html，并同步 docs/
-python analysis/export_office.py         # → deliverables/ 下的 Word 摘要与 Excel 证据表
+python analysis/export_office.py         # → deliverables/ 下的 Word 摘要、Excel 证据表、视频脚本 Word
 ```
 
 7 月版脚本保留可复跑：`analysis/explore_v1.py`、`analysis/export_report_data.py`（输出到 `report/archive/`）。
