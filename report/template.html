@@ -4,413 +4,333 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="dark">
-<title>守望先锋2 国服回归500天 · 数据驱动的营销洞察</title>
+<title>/*__TITLE__*/</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&family=Noto+Sans+SC:wght@400;500;700&family=Saira+Condensed:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+<!-- 字体非阻塞加载：大陆网络下 Google Fonts 可能超时，不能卡住首屏；失败时回退系统字体 -->
+<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&family=Noto+Sans+SC:wght@400;500;700&family=Saira+Condensed:ital,wght@0,600;0,700;1,600;1,700&display=swap">
 <style>
 /* ============ OW 设计语言：石板灰 + 能量橙，斜切平行四边形，克制 ============ */
 :root{
-  --bg:#12161d; --bg2:#151b24; --panel:#1b222d; --panel2:#202936;
-  --line:#2a3442; --txt:#eef2f7; --mut:#9aa7b6; --dim:#6b7c90;
-  --org:#f99e1a; --org2:#ffba4d; --cyn:#3fb6e3; --grn:#4fd08a;
+  --bg:#12161d; --panel:#1b222d; --panel2:#202936;
+  --line:#2a3442; --txt:#eef2f7; --mut:#a3afbd; --dim:#7a8a9d;
+  --org:#f99e1a; --org2:#ffba4d; --cyn:#3fb6e3; --grn:#4fd08a; --red:#ef6b5b;
   --skew:-8deg;
   --chamfer:polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{
-  background:var(--bg); color:var(--txt);
-  font-family:'Noto Sans SC',-apple-system,'Microsoft YaHei',sans-serif;
-  font-size:15px; line-height:1.75; overflow-x:hidden;
-}
-/* 六边形纹理：仅极淡的一层，OW 加载页式克制 */
+body{background:var(--bg);color:var(--txt);
+  font-family:'Noto Sans SC',-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;
+  font-size:15px;line-height:1.75;overflow-x:hidden}
 body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.3;
   background-image:url("data:image/svg+xml,%3Csvg width='56' height='100' viewBox='0 0 56 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28 0L56 16v34L28 66 0 50V16z' fill='none' stroke='%231a212c' stroke-width='1'/%3E%3Cpath d='M28 66l28 16v18H0V82z' fill='none' stroke='%231a212c' stroke-width='1'/%3E%3C/svg%3E");}
 body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
   background:radial-gradient(1100px 520px at 88% -6%,rgba(249,158,26,.06),transparent 60%);}
 main{position:relative;z-index:1;max-width:1060px;margin:0 auto;padding:0 28px 90px}
 ::selection{background:var(--org);color:#12161d}
-a:focus-visible,button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
-/* 页顶能量条：OW 菜单式的一根橙线，不发光 */
+a{color:var(--cyn);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
 .energy{position:fixed;top:0;left:0;right:0;height:2px;z-index:5;
   background:linear-gradient(90deg,var(--org) 0 28%,rgba(249,158,26,.25) 28% 100%)}
-
-/* ---------- type ---------- */
-h1,h2,.disp{font-family:'ZCOOL QingKe HuangYou','Noto Sans SC',sans-serif;font-weight:400;letter-spacing:.02em}
-.num{font-family:'Saira Condensed','Noto Sans SC',sans-serif;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:.01em}
+h1,h2,.disp{font-family:'ZCOOL QingKe HuangYou','Noto Sans SC','Microsoft YaHei',sans-serif;font-weight:400;letter-spacing:.02em}
+.num{font-family:'Saira Condensed','Noto Sans SC',sans-serif;font-weight:700;font-variant-numeric:tabular-nums}
 
 /* ---------- topbar ---------- */
-.topbar{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:1px solid var(--line);font-size:12.5px;color:var(--mut)}
+.topbar{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:1px solid var(--line);font-size:12.5px;color:var(--mut)}
 .topbar .brand{display:flex;align-items:center;gap:10px;color:var(--txt)}
 .brand .dot{width:11px;height:12px;background:var(--org);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
-.topbar .meta span{margin-left:18px}
+.topbar .meta{display:flex;flex-wrap:wrap;gap:4px 18px}
 .topbar .meta b{color:var(--cyn);font-weight:600}
 
 /* ---------- hero ---------- */
-.hero{padding:72px 0 26px}
-/* OW 签名元素：斜切徽章 */
-.kicker{display:inline-block;font-family:'Saira Condensed';font-weight:600;font-style:italic;font-size:13px;letter-spacing:.3em;color:#12161d;background:var(--org);padding:4px 16px 4px 18px;transform:skewX(var(--skew));margin-bottom:28px}
-h1{font-size:clamp(38px,6vw,62px);line-height:1.14}
+.hero{padding:64px 0 22px}
+.kicker{display:inline-block;font-family:'Saira Condensed',sans-serif;font-weight:600;font-style:italic;font-size:13px;letter-spacing:.3em;color:#12161d;background:var(--org);padding:4px 16px 4px 18px;transform:skewX(var(--skew));margin-bottom:24px}
+h1{font-size:clamp(32px,5.4vw,56px);line-height:1.16}
 h1 .hl{color:var(--org)}
-h1 .hl.num{font-style:italic;font-weight:700;letter-spacing:0}
 h1 .thin{color:var(--dim)}
-.hero .sub{margin-top:18px;max-width:640px;color:var(--mut)}
+.hero .sub{margin-top:18px;max-width:700px;color:var(--mut)}
 .hero .sub b{color:var(--txt);font-weight:500}
-.statgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:42px}
-.stat{background:linear-gradient(180deg,var(--panel),var(--panel2));clip-path:var(--chamfer);padding:20px 22px 18px 24px;position:relative}
+.statgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px}
+.stat{background:linear-gradient(180deg,var(--panel),var(--panel2));clip-path:var(--chamfer);padding:18px 20px 16px 22px;position:relative}
 .stat::before{content:'';position:absolute;left:0;top:12px;bottom:12px;width:3px;background:var(--org)}
-.stat .v{font-size:34px;line-height:1.1;font-style:italic}
-.stat .v em{font-style:normal;font-size:16px;color:var(--mut);margin-left:2px;font-family:'Noto Sans SC'}
+.stat .v{font-size:32px;line-height:1.1;font-style:italic}
+.stat .v em{font-style:normal;font-size:15px;color:var(--mut);margin-left:3px;font-family:'Noto Sans SC',sans-serif}
 .stat .k{font-size:12.5px;color:var(--mut);margin-top:6px}
 .stat:nth-child(2) .v{color:var(--org)} .stat:nth-child(3) .v{color:var(--cyn)}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px;font-size:12.5px}
+.toc a{color:var(--mut);text-decoration:none;border:1px solid var(--line);padding:3px 12px;transform:skewX(var(--skew))}
+.toc a:hover{color:var(--org);border-color:var(--org)}
 
 /* ---------- sections ---------- */
-section{margin-top:80px}
+section{margin-top:76px;scroll-margin-top:20px}
 .sechead{display:flex;align-items:center;gap:14px;margin-bottom:8px}
-/* OW 式斜切编号章 */
-.sechead .no{font-family:'Saira Condensed';font-weight:700;font-style:italic;font-size:15px;color:#12161d;background:var(--org);padding:1px 11px;transform:skewX(var(--skew));flex:none}
-h2{font-size:29px}
-.selead{color:var(--mut);max-width:760px;margin-bottom:24px}
+.sechead .no{font-family:'Saira Condensed',sans-serif;font-weight:700;font-style:italic;font-size:15px;color:#12161d;background:var(--org);padding:1px 11px;transform:skewX(var(--skew));flex:none}
+h2{font-size:clamp(23px,3.4vw,29px);line-height:1.3}
+h3{font-size:16.5px;line-height:1.45}
+.selead{color:var(--mut);max-width:780px;margin-bottom:22px}
 .selead b{color:var(--txt);font-weight:500}
-
-.card{background:linear-gradient(180deg,var(--panel),var(--panel2));clip-path:var(--chamfer);padding:26px 28px}
-.callout{display:flex;gap:12px;background:rgba(63,182,227,.06);border-left:3px solid var(--cyn);padding:14px 18px;font-size:13.5px;color:var(--mut);margin-top:16px}
+.card{background:linear-gradient(180deg,var(--panel),var(--panel2));clip-path:var(--chamfer);padding:24px 26px}
+.callout{display:flex;gap:12px;background:rgba(63,182,227,.06);border-left:3px solid var(--cyn);padding:12px 16px;font-size:13.5px;color:var(--mut);margin-top:14px}
 .callout b{color:var(--cyn);font-weight:500}
-svg text{font-family:'Noto Sans SC',sans-serif}
-svg .num,svg .oxn{font-family:'Saira Condensed',sans-serif;font-weight:600}
+.callout.warn{background:rgba(249,158,26,.06);border-left-color:var(--org)} .callout.warn b{color:var(--org)}
+figure{margin:0}
+figcaption{font-size:13.5px;color:var(--mut);margin-top:10px}
+figcaption b{color:var(--txt);font-weight:500}
+svg text{font-family:'Noto Sans SC','Microsoft YaHei',sans-serif}
+svg .oxn{font-family:'Saira Condensed',sans-serif;font-weight:600}
+
+/* 证据强度徽章 */
+.ev{display:inline-block;font-size:11px;padding:0 9px;transform:skewX(var(--skew));color:#12161d;font-weight:500;vertical-align:2px;white-space:nowrap}
+.ev.fact{background:var(--cyn)} .ev.infer{background:var(--org)} .ev.hypo{background:transparent;color:var(--mut);outline:1px dashed var(--dim)}
+.ev.src-off{background:var(--grn)} .ev.src-3rd{background:#8a97a8}
+
+/* ---------- findings ---------- */
+.finds{display:grid;gap:14px}
+.find{background:linear-gradient(180deg,var(--panel),var(--panel2));clip-path:var(--chamfer);padding:22px 26px;position:relative}
+.find .idx{font-family:'Saira Condensed',sans-serif;font-size:30px;font-weight:700;font-style:italic;color:transparent;-webkit-text-stroke:1px var(--org);line-height:1;float:left;margin:2px 16px 0 0}
+.find h3{margin-bottom:10px}
+.find dl{display:grid;grid-template-columns:96px 1fr;gap:6px 14px;font-size:13.5px;clear:both}
+.find dt{color:var(--dim)}
+.find dd{color:var(--mut)}
+.find dd b{color:var(--txt);font-weight:500}
 
 /* ---------- timeline ---------- */
-.tl{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:10px}
-.tl .node{position:relative;background:var(--panel);clip-path:var(--chamfer);padding:16px 14px 14px;font-size:12.5px;border-top:2px solid var(--line)}
-.tl .node .d{font-family:'Saira Condensed';font-weight:600;font-size:13px;color:var(--cyn);letter-spacing:.05em}
-.tl .node .t{font-weight:700;font-size:13.5px;margin:4px 0 2px}
-.tl .node .s{color:var(--dim);font-size:11.5px;line-height:1.5}
-/* 未来节点：OW 式斜纹提示，不发光 */
-.tl .node.future{border-top-color:var(--org);
-  background:repeating-linear-gradient(-45deg,rgba(249,158,26,.10) 0 8px,rgba(249,158,26,.03) 8px 16px),var(--panel)}
-.tl .node.future .d{color:var(--org)}
-.tl .node.future::after{content:'即将到来';position:absolute;top:8px;right:10px;font-size:10px;color:var(--org);letter-spacing:.1em}
+.tl{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.node{position:relative;background:var(--panel);clip-path:var(--chamfer);padding:15px 15px 13px;font-size:12.5px;border-top:2px solid var(--line)}
+.node .d{font-family:'Saira Condensed',sans-serif;font-weight:600;font-size:13.5px;color:var(--cyn);letter-spacing:.04em}
+.node .t{font-weight:700;font-size:13.5px;margin:4px 0 4px;line-height:1.5}
+.node .s{color:var(--mut);font-size:12px;line-height:1.6}
+.node .src{margin-top:8px;font-size:11px;color:var(--dim)}
+.node .src a{color:var(--dim)}
+.node.future{border-top-color:var(--org);background:repeating-linear-gradient(-45deg,rgba(249,158,26,.10) 0 8px,rgba(249,158,26,.03) 8px 16px),var(--panel)}
+.node.future .d{color:var(--org)}
+.node.future::after{content:attr(data-status);position:absolute;top:8px;right:10px;font-size:10px;color:var(--org);letter-spacing:.1em}
 
-/* ---------- bars/compare ---------- */
-.vsrow{display:grid;grid-template-columns:150px 1fr 130px;gap:14px;align-items:center;padding:13px 0;border-bottom:1px dashed var(--line)}
-.vsrow:last-child{border-bottom:0}
-.vsrow .who{font-size:13.5px;font-weight:500}
-.vsrow .who .n{display:block;font-size:11.5px;color:var(--dim);font-weight:400}
-.vsrow .track{height:22px;background:rgba(255,255,255,.04);transform:skewX(var(--skew));position:relative;overflow:hidden}
-.vsrow .fill{height:100%;background:var(--cyn);width:0;transition:width .9s cubic-bezier(.22,1,.36,1)}
-.vsrow.org .fill{background:var(--org)}
-.vsrow.dim2 .fill{background:#5a6b7f}
-.vsrow .val{font-family:'Saira Condensed';font-weight:700;font-size:16px;text-align:right;font-variant-numeric:tabular-nums}
-.vsrow .val small{display:block;font-size:11px;color:var(--dim);font-family:'Noto Sans SC';font-weight:400}
-
-/* ---------- top videos ---------- */
-table{width:100%;border-collapse:collapse;font-size:13.5px}
-th{font-size:11.5px;color:var(--dim);text-align:left;font-weight:500;letter-spacing:.08em;padding:0 10px 10px;border-bottom:1px solid var(--line)}
-td{padding:11px 10px;border-bottom:1px dashed var(--line);vertical-align:top}
+/* ---------- tables（容器查询：窄时变卡片） ---------- */
+.tw{overflow-x:auto;container-type:inline-size}
+table{width:100%;border-collapse:separate;border-spacing:0;font-size:13.5px}
+th{font-size:11.5px;color:var(--dim);text-align:left;font-weight:500;letter-spacing:.06em;padding:0 10px 9px;border-bottom:1px solid var(--line);vertical-align:bottom}
+td{padding:10px;border-bottom:1px dashed var(--line);vertical-align:top;color:var(--mut)}
+td b,td strong{color:var(--txt);font-weight:500}
 tr:last-child td{border-bottom:0}
-td.rk{font-family:'Saira Condensed';font-weight:700;font-style:italic;color:var(--org);width:34px;font-size:15px}
-td.ttl{max-width:380px}
-td .au{color:var(--dim);font-size:12px}
-td.pv{font-family:'Saira Condensed';font-weight:600;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;font-size:14px}
-.b-ai,.b-of{display:inline-block;font-size:10px;padding:1px 8px;margin-left:8px;vertical-align:1px;transform:skewX(var(--skew));color:#12161d}
-.b-ai{background:var(--grn)} .b-of{background:var(--cyn)}
-
-/* ---------- tags ---------- */
-.tagwrap{display:grid;grid-template-columns:1fr 1fr;gap:6px 34px}
-.tagrow{display:grid;grid-template-columns:128px 1fr 46px;gap:10px;align-items:center;font-size:12.5px;padding:5px 0}
-.tagrow .bar{height:10px;background:rgba(255,255,255,.05);transform:skewX(var(--skew));overflow:hidden}
-.tagrow .bar i{display:block;height:100%;background:#46586d;width:0;transition:width .8s ease}
-.tagrow.of .bar i{background:var(--org)}
-.tagrow.of .lb{color:var(--org2)}
-.tagrow .ct{font-family:'Saira Condensed';font-weight:600;color:var(--mut);text-align:right;font-size:13px;font-variant-numeric:tabular-nums}
-.legend{font-size:12px;color:var(--dim);margin-top:14px}
-.legend i{display:inline-block;width:10px;height:10px;margin:0 6px -1px 14px;background:#46586d;transform:skewX(var(--skew))}
-.legend i.o{background:var(--org)}
-
-/* ---------- recs ---------- */
-.recs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.rec{background:linear-gradient(180deg,var(--panel),var(--panel2));clip-path:var(--chamfer);padding:24px;position:relative;transition:transform .2s ease,box-shadow .2s ease}
-.rec:hover{transform:translateY(-2px)}
-.rec::before{content:'';position:absolute;left:0;top:12px;bottom:12px;width:3px;background:var(--org);opacity:0;transition:opacity .2s ease}
-.rec:hover::before{opacity:1}
-.rec .idx{font-family:'Saira Condensed';font-size:36px;font-weight:700;font-style:italic;color:transparent;-webkit-text-stroke:1px var(--org);line-height:1}
-.rec h3{font-size:17px;margin:14px 0 8px}
-.rec p{font-size:13px;color:var(--mut)}
-.rec .ev{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font-size:12px;color:var(--dim)}
-.rec .ev b{color:var(--cyn);font-weight:500}
-.rec .anchor{position:absolute;top:20px;right:16px;font-size:10.5px;color:var(--org);letter-spacing:.12em;border:1px solid rgba(249,158,26,.45);padding:2px 9px;transform:skewX(var(--skew))}
-
-/* ---------- method ---------- */
-.method{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.mcard{background:var(--panel);clip-path:var(--chamfer);padding:22px 24px;font-size:13px;color:var(--mut)}
-.mcard h4{font-size:14px;color:var(--txt);margin-bottom:10px;display:flex;gap:8px;align-items:center}
-.mcard h4::before{content:'';width:9px;height:10px;background:var(--org);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
-.mcard ul{list-style:none}
-.mcard li{padding:4px 0 4px 16px;position:relative}
-.mcard li::before{content:'›';position:absolute;left:0;color:var(--org)}
-.mcard code{font-family:'Saira Condensed';font-weight:600;font-size:13px;color:var(--cyn);background:rgba(63,182,227,.08);padding:1px 6px}
-
-footer{margin-top:88px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;font-size:12.5px;color:var(--dim)}
-footer a{color:var(--mut);text-decoration:none;border-bottom:1px dotted var(--dim)}
-footer a:hover{color:var(--org);border-bottom-color:var(--org);transition:color .2s ease}
-
-/* reveal */
-.rv{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s cubic-bezier(.22,1,.36,1)}
-.rv.in{opacity:1;transform:none}
-
-@media (prefers-reduced-motion: reduce){
-  html{scroll-behavior:auto}
-  .rv{opacity:1;transform:none;transition:none}
-  .vsrow .fill,.tagrow .bar i{transition:none}
-  .rec,.rec::before{transition:none}
+td.n{font-family:'Saira Condensed',sans-serif;font-weight:600;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;font-size:14px;color:var(--txt)}
+th.n{text-align:right}
+.tag{display:inline-block;font-size:10.5px;padding:0 7px;margin:2px 4px 0 0;border:1px solid var(--line);color:var(--mut);white-space:nowrap}
+.tag.of{border-color:var(--cyn);color:var(--cyn)}
+@container (width < 600px){
+  .tw table,.tw thead,.tw tbody,.tw tr,.tw th,.tw td{display:block}
+  .tw thead{display:none}
+  .tw tr{padding:10px 0;border-bottom:1px dashed var(--line)}
+  .tw td{border:0;padding:3px 0;text-align:left}
+  .tw td.n{text-align:left}
+  .tw td[data-label]::before{content:attr(data-label) "：";content:attr(data-label) "：" / attr(data-label);color:var(--dim);font-family:'Noto Sans SC',sans-serif;font-weight:400;font-size:12px;margin-right:4px}
 }
+
+/* ---------- details ---------- */
+details{margin-top:12px;font-size:13px;color:var(--mut)}
+summary{cursor:pointer;color:var(--cyn);list-style:none;display:inline-flex;align-items:center;gap:8px}
+summary::-webkit-details-marker{display:none}
+summary::before{content:'';width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);transition:transform .2s ease}
+details[open]>summary::before{transform:rotate(45deg)}
+details>.inner{margin-top:10px}
+
+/* ---------- segments / recs / topics ---------- */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.box{background:linear-gradient(180deg,var(--panel),var(--panel2));clip-path:var(--chamfer);padding:22px 22px 20px;position:relative;font-size:13.5px;color:var(--mut)}
+.box h3{color:var(--txt);margin-bottom:8px}
+.box .lbl{display:block;font-size:11.5px;color:var(--dim);letter-spacing:.06em;margin-top:10px}
+.box p{margin-top:2px}
+.box b{color:var(--txt);font-weight:500}
+.box .anchor{position:absolute;top:18px;right:14px;font-size:10.5px;color:var(--org);letter-spacing:.1em;border:1px solid rgba(249,158,26,.45);padding:1px 8px;transform:skewX(var(--skew))}
+.box.muted{opacity:.82;border:1px dashed var(--line);background:transparent;clip-path:none}
+.metric{margin-top:14px;border-top:1px dashed var(--line);padding-top:12px}
+.metric dl{display:grid;grid-template-columns:84px 1fr;gap:4px 12px}
+.metric dt{color:var(--dim)} .metric dd b{color:var(--org2)}
+ol.steps{padding-left:20px;margin-top:4px} ol.steps li{margin:3px 0}
+
+footer{margin-top:84px;padding-top:22px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 20px;font-size:12.5px;color:var(--dim)}
+footer a{color:var(--mut)}
+
 @media(max-width:860px){
   .statgrid{grid-template-columns:1fr 1fr}
-  .tl{grid-template-columns:1fr 1fr 1fr}
-  .recs,.method,.tagwrap{grid-template-columns:1fr}
-  .vsrow{grid-template-columns:110px 1fr 100px}
+  .tl,.grid3{grid-template-columns:1fr 1fr}
+  .grid2{grid-template-columns:1fr}
 }
+@media(max-width:560px){
+  main{padding:0 16px 70px}
+  .tl,.grid3{grid-template-columns:1fr}
+  .find dl,.metric dl{grid-template-columns:1fr;gap:0}
+  .find dt,.metric dt{margin-top:6px}
+  .card,.find,.box{padding:18px 16px}
+  .stat .v{font-size:26px}
+}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}summary::before{transition:none}}
 </style>
 </head>
 <body>
 <div class="energy" aria-hidden="true"></div>
-<main>
-
-<div class="topbar">
-  <div class="brand"><span class="dot" aria-hidden="true"></span><span class="disp" style="font-size:15px">OW 营销洞察 · 战报</span></div>
-  <div class="meta"><span>数据窗口 <b class="num">2025.02.19 – 2026.07.22</b></span><span>抓取 <b class="num">2026.07.22</b></span><span>马准名</span></div>
-</div>
-
-<div class="hero">
-  <span class="kicker">DATA-DRIVEN MARKETING INSIGHT</span>
-  <h1>守望先锋2 <span class="thin">·</span> 国服回归 <span class="hl num">500</span> 天<br>内容生态<span class="thin">与</span>营销机会</h1>
-  <p class="sub">基于 <b>B 站内容生态 × OWCS 赛事 × 游戏元数据</b> 三源公开数据，量化回归后的玩家内容图景，回答一个问题：<b>下一个营销爆点在哪里。</b></p>
-  <div class="statgrid">
-    <div class="stat rv"><div class="v num" data-cnt="3176">0</div><div class="k">清洗后有效视频（两轮规则）</div></div>
-    <div class="stat rv"><div class="v num" data-cnt="2661">0</div><div class="k">国服回归以来发布</div></div>
-    <div class="stat rv"><div class="v"><span class="num" data-cnt="1.79" data-dec="2">0</span><em>亿</em></div><div class="k">回归后视频总播放</div></div>
-    <div class="stat rv"><div class="v num" data-cnt="3">0</div><div class="k">数据源，全部公开可复现</div></div>
-  </div>
-</div>
-
-<section id="s1">
-  <div class="sechead rv"><span class="no">01</span><h2>叙事时间线：节点一个接一个</h2></div>
-  <p class="selead rv">回归不是终点，而是一串营销节点的起点——<b>年底的世界总决赛落地中国，是整条时间线的高潮</b>，也是本报告所有建议的锚点。</p>
-  <div class="tl rv">
-    <div class="node"><div class="d">2025.02.19</div><div class="t">国服回归</div><div class="s">停服 757 天后回归，预约 307 万</div></div>
-    <div class="node"><div class="d">2025.08</div><div class="t">中国英雄「无漾」上线</div><div class="s">官方 PV 播放 112 万</div></div>
-    <div class="node"><div class="d">2026.02</div><div class="t">OWCS 中国合作战队公布</div><div class="s">WBG / JDG / AG 三支入驻</div></div>
-    <div class="node"><div class="d">2026.05</div><div class="t">守望先锋十周年</div><div class="s">同名话题标签自发出现 144 次</div></div>
-    <div class="node"><div class="d">2026.06–07</div><div class="t">OWCS 中国 Stage 2</div><div class="s">奖金池 ¥70 万，8 队</div></div>
-    <div class="node future"><div class="d">2026.12.02–06</div><div class="t">OWCS 世界总决赛 · 中国</div><div class="s">年度最大主场营销节点</div></div>
-  </div>
-</section>
-
-<section id="s2">
-  <div class="sechead rv"><span class="no">02</span><h2>内容大盘：热度曲线与三次抬升</h2></div>
-  <p class="selead rv">月度视频供给与播放走势：回归首月冲高 → 2025 下半年回落 → <b>2026 年 2 月（OWCS）、5 月（十周年）、6-7 月（Stage 2）三次抬升</b>。</p>
-  <div class="card rv"><div id="trend"></div>
-    <div class="callout"><span aria-hidden="true">⚠</span><div><b>方法边界：</b>数据来自 B 站搜索 API 综合排序（每词上限 1000 条），是「可见性样本」而非全量普查；近期视频在排序中占优，2026-07 的供给峰值含采样偏差，趋势方向可用、幅度不可直接引用。</div></div>
-  </div>
-</section>
-
-<section id="s3">
-  <div class="sechead rv"><span class="no">03</span><h2>官方 vs 二创：一个供给缺口，一个形态问题</h2></div>
-  <p class="selead rv">回归以来官方主号单条均值 <b>22.2 万播放，是 UGC 大盘的 3.3 倍——但只发了 15 条</b>；官方电竞号发了 54 条，单条均值 <b>3.9 万，反而低于 UGC 大盘</b>。一个缺供给，一个缺形态。</p>
-  <div class="card rv">
-    <div id="vs"></div>
-    <div class="callout" style="border-left-color:var(--org);background:rgba(249,158,26,.06)"><span aria-hidden="true">◆</span><div><b style="color:var(--org)">头部二创的效率：</b>「兔了个狲」2 条视频均值 100 万（sora2 AI 二创）、「久子鸽」10 条均值 47 万——UGC 头部的单条效率是官方电竞号的 10-25 倍。</div></div>
-  </div>
-</section>
-
-<section id="s4">
-  <div class="sechead rv"><span class="no">04</span><h2>回归后爆款 TOP10：谁在制造声量</h2></div>
-  <p class="selead rv">10 条爆款里：<b>AI 二创、女团联动、角色叙事</b>各占一席——爆款三要素已经换代，不再是传统集锦。</p>
-  <div class="card rv" style="padding:18px 24px"><table id="topv"></table></div>
-</section>
-
-<section id="s5">
-  <div class="sechead rv"><span class="no">05</span><h2>标签生态：官方话题真实起量</h2></div>
-  <p class="selead rv">「守望先锋英雄召集」「守望先锋不止FPS」两个官方话题合计出现 <b>1,244 次</b>，渗透率真实——话题运营的地基是好的，缺的是往上盖楼的内容企划。</p>
-  <div class="card rv"><div class="tagwrap" id="tags"></div>
-    <div class="legend"><i aria-hidden="true"></i> 一般标签<i class="o" aria-hidden="true"></i>官方运营话题</div>
-  </div>
-</section>
-
-<section id="s6v">
-  <div class="sechead rv"><span class="no">06</span><h2>玩家之声：三个平台，三种声音</h2></div>
-  <p class="selead rv">在内容与赛事数据之外，叠加 <b>261 条 B 站热评 × 小红书三关键词一手扫描 × 知乎长期讨论</b>做玩家痛点研究。最重要的发现不是某条痛点，而是<b>平台分工</b>——同一群玩家在不同平台说完全不同的话。</p>
-  <div class="tl rv" style="grid-template-columns:repeat(3,1fr)">
-    <div class="node"><div class="d">BILIBILI</div><div class="t">梗文化共鸣场</div><div class="s">热评几乎无抱怨：高赞全是梗与二创共鸣（单条最高 1 万+ 赞）。适合做赛事声量与二创企划</div></div>
-    <div class="node"><div class="d">小红书</div><div class="t">求助与吐槽第一现场</div><div class="s">「找搭子/求带」帖是萌新关键词下的绝对主流；回归活动规则吐槽 75–149 赞霸榜。适合做新手承接与官方答疑</div></div>
-    <div class="node"><div class="d">知乎</div><div class="t">结构性反思区</div><div class="s">新手门槛、匹配机制的长文讨论跨年代稳定存在。适合做口碑与深度叙事</div></div>
-  </div>
-  <div class="card rv" style="margin-top:16px;padding:18px 24px">
-    <table>
-      <thead><tr><th scope="col">痛点</th><th scope="col">信号</th><th scope="col">含义</th></tr></thead>
-      <tbody>
-        <tr><td class="ttl"><b>组队/搭子缺口</b></td><td>小红书功能性求助帖高频长尾；付费陪玩生态正在抽走固定队友</td><td>官方无组队/师徒产品，小红书成了事实上的组队大厅</td></tr>
-        <tr><td class="ttl"><b>活动规则沟通</b></td><td>回归奖励规则改动吐槽 75–149 赞；搜索联想被「奖励怎么领」占满</td><td>社区自发做「三分钟看懂」= 官方说明缺位</td></tr>
-        <tr><td class="ttl"><b>新手门槛与环境</b></td><td>三源共现：「队友让我滚回山中去」「新手必开的是关闭聊天」</td><td>结构性留存风险；481 赞入坑指南证明新手内容有真需求</td></tr>
-        <tr><td class="ttl"><b>决策信任</b></td><td>模式收缩不满 134 赞 vs <b>总监坦诚沟通 106 赞</b></td><td>数据里自带对照实验：玩家要的是「改之前说清楚」</td></tr>
-      </tbody>
-    </table>
-    <div class="callout" style="margin-top:14px"><span aria-hidden="true">◇</span><div><b>玩家运营建议（三条，各配可验证指标）：</b>①官方组队与师徒企划——北极星=师徒局周场次，护栏=师徒新手次周留存须高于单排新手（防做成流于形式的功能），外部验证=小红书「找搭子」帖量变化（基线已在本项目数据中）；②活动规则「一图流」内容线——北极星=<b>零求助领奖率</b>（活动期未发生任何"怎么领"求助即拿全奖励的玩家占比），外部验证=社区自发解读帖声量回落（基线=149 赞白嫖攻略帖）；③开发者坦诚沟通栏目化——北极星=栏目互动率对常规公告的倍数（基线=坦诚贴 106 赞），护栏=争议话题响应时长。</div></div>
-    <div class="callout"><span aria-hidden="true">⚠</span><div><b>方法边界：</b>B 站为热评样本（匿名可得的每视频前 3 条）；小红书为登录态标题级扫描（约 90 条笔记，未逐篇深读）；知乎为主题级归纳。定性证据，置信度中。</div></div>
-  </div>
-</section>
-
-<section id="s6">
-  <div class="sechead rv"><span class="no">07</span><h2>营销建议：内容与赛事 <span style="font-size:13px;color:var(--dim);font-family:'Noto Sans SC'">（全部锚定数据 · 各配指标）</span></h2></div>
-  <p class="selead rv">节奏原则：<b>集中打「闪电战」而非全年撒胡椒面</b>——所有资源向 12 月世界总决赛一个窗口收拢，赛前蓄水、决赛周爆发、赛后长尾。</p>
-  <div class="recs">
-    <div class="rec rv"><span class="anchor">锚点 · 世界总决赛</span><div class="idx num">01</div>
-      <h3>赛事二创共创企划</h3>
-      <p>把 OWCS 世界总决赛（12 月·中国主场）的切片授权 + 二创激励开放给头部 UGC，官方话题页聚合。节奏：赛前 6 周头部创作者内圈启动 → 决赛周集中爆发 → 赛后切片长尾。</p>
-      <div class="ev"><b>依据</b> 官方电竞号单条均值 3.9 万 &lt; UGC 大盘 6.7 万；OWCS 标签自发出现 218 次</div>
-      <div class="ev"><b>指标</b> 北极星=总决赛话题二创投稿数/周（基线=Stage 2 同口径）；护栏=投稿单条均值播放不降（防灌水凑数）</div></div>
-    <div class="rec rv"><span class="anchor">锚点 · 十周年</span><div class="idx num">02</div>
-      <h3>回归玩家数据年报 H5</h3>
-      <p>十周年 × 回归叙事合流：做「你的守望这一年」个人数据年报（对标网易云年度报告），补上 OW 缺失的官方数据内容资产。</p>
-      <div class="ev"><b>依据</b> 「守望先锋十周年」标签自发 144 次；横向对比 LoL/Dota2 生态，OW 官方数据向内容近乎空白</div>
-      <div class="ev"><b>指标</b> 北极星=年报分享率（生成后分享出去才是价值时刻，不是打开数）；护栏=完读率</div></div>
-    <div class="rec rv"><span class="anchor">锚点 · AI 内容</span><div class="idx num">03</div>
-      <h3>官方 AI 二创征集赛</h3>
-      <p>回归后播放 TOP1 是 sora2 生成的 AI 二创（178 万）。与其等平台自发，不如官方下场定规则、给素材包、办征集，把新爆款形态收编进营销日历。</p>
-      <div class="ev"><b>依据</b> TOP10 爆款中 AI 二创占 2 席；头部 AI 二创作者单条均值 100 万，为全场最高</div>
-      <div class="ev"><b>指标</b> 北极星=赛后 30 天参赛者自发复投率（活动结束还在产出=生态被激活而非一次性）；护栏=原创争议申诉率</div></div>
-  </div>
-</section>
-
-<section id="s7">
-  <div class="sechead rv"><span class="no">08</span><h2>方法与可信性</h2></div>
-  <div class="method">
-    <div class="mcard rv"><h4>数据源（全部公开）</h4><ul>
-      <li>B 站 web 搜索 API：5 关键词 × ≤50 页，视频元数据 3,354 条（原始）</li>
-      <li>B 站热评样本：87 个主题视频 × 前 3 条热评，共 261 条</li>
-      <li>Liquipedia：OWCS 2026 中国 Stage 1/2 + 世界总决赛页面 wikitext</li>
-      <li>OverFast API：英雄 / 职责 / 地图 / 模式元数据</li>
-      <li>管线 <code>Python + DuckDB</code>，一键复现，原始数据含抓取时间戳</li>
-      <li>补充定性源：小红书（标题级扫描）与知乎（主题归纳），仅用于 §06，不入库</li>
-    </ul></div>
-    <div class="mcard rv"><h4>清洗与边界（诚实优先）</h4><ul>
-      <li><code>R1</code> 剔除挂机蹭激励计划视频（11 条）</li>
-      <li><code>R2</code> 相关性过滤：剔除混入的英雄联盟内容（TES/MSI 等 167 条）</li>
-      <li>搜索 API 为可见性样本，近期内容占优 → 趋势幅度不可直接引用</li>
-      <li>赛事与节点事实标注来源与置信度；未经核验不写</li>
-    </ul></div>
-  </div>
-</section>
-
-<footer>
-  <div>OW Marketing Insight · 个人研究项目 · 与暴雪娱乐 / 网易无隶属关系，不使用任何官方美术资产</div>
-  <div>马准名 · <a href="https://github.com/Martin-cell-blip">github.com/Martin-cell-blip</a></div>
-</footer>
-
+<main id="app">
+<noscript><p style="padding:40px 0">本页图表与正文由内嵌数据渲染，需要启用 JavaScript。</p></noscript>
 </main>
 <script>
 const D = /*__DATA__*/null;
-const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-/* ---------- helpers ---------- */
 const $ = s => document.querySelector(s);
-const fmt = n => n >= 1e8 ? (n/1e8).toFixed(2)+' 亿' : n >= 1e4 ? (n/1e4).toFixed(1)+' 万' : String(n);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmt = n => n == null ? '–' : n >= 1e8 ? (n/1e8).toFixed(2)+' 亿' : n >= 1e4 ? (n/1e4).toFixed(1)+' 万' : n.toLocaleString('zh-CN');
+const EV = {'事实':'fact','推断':'infer','待验证假设':'hypo','待验证':'hypo'};
+const ev = s => `<span class="ev ${EV[s]||'hypo'}">${esc(s)}</span>`;
+const srcLink = id => { const s = D.sources.find(x=>x.id===id); return s ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${id}</a>` : esc(id); };
+const srcRefs = t => esc(t).replace(/\b([SF]\d{2})\b/g, m => srcLink(m));
 
-/* ---------- hero count-up ---------- */
-function countUp(el){
-  const target = parseFloat(el.dataset.cnt), dec = +(el.dataset.dec||0);
-  const done = () => el.textContent = target.toFixed(dec).replace(/\B(?=(\d{3})+(?!\d))/g,',');
-  if(RM) return done();
-  const t0 = performance.now(), dur = 1200;
-  (function tick(t){
-    const p = Math.min(1,(t-t0)/dur), e = 1-Math.pow(1-p,3);
-    el.textContent = (target*e).toFixed(dec).replace(/\B(?=(\d{3})+(?!\d))/g,',');
-    if(p<1) requestAnimationFrame(tick); else done();
-  })(t0);
+function table(cols, rows, cls=''){
+  return `<div class="tw"><table class="${cls}"><thead><tr>${cols.map(c=>`<th scope="col"${c.n?' class="n"':''}>${esc(c.h)}</th>`).join('')}</tr></thead><tbody>${
+    rows.map(r=>`<tr>${cols.map((c,i)=>`<td data-label="${esc(c.h)}"${c.n?' class="n"':''}>${r[i]}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+}
+function sec(id, no, title, lead, body){
+  return `<section id="${id}" aria-labelledby="${id}-h"><div class="sechead"><span class="no">${no}</span><h2 id="${id}-h">${title}</h2></div>${lead?`<p class="selead">${lead}</p>`:''}${body}</section>`;
 }
 
-/* ---------- trend chart ---------- */
-function trend(){
-  const M = D.monthly, W=1000, H=320, pl=52, pr=56, pt=30, pb=46;
-  const iw = W-pl-pr, ih = H-pt-pb;
-  const maxN = Math.max(...M.map(d=>d.n)), maxP = Math.max(...M.map(d=>d.plays));
-  const bw = iw/M.length*0.55;
-  const x = i => pl + iw*(i+0.5)/M.length;
-  const yN = v => pt+ih-(v/maxN)*ih, yP = v => pt+ih-(v/maxP)*ih;
-  const events = {"2025-02":"回归","2025-08":"无漾","2026-02":"OWCS","2026-05":"十周年","2026-06":"Stage2"};
-  let s = `<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto" role="img" aria-label="月度视频数与播放量趋势图">`;
-  for(let g=0; g<=4; g++){const y=pt+ih*g/4;
-    s += `<line x1="${pl}" y1="${y}" x2="${W-pr}" y2="${y}" stroke="#26303e" stroke-dasharray="3 5"/>`;
-    s += `<text x="${pl-8}" y="${y+4}" fill="#6b7c90" font-size="11" text-anchor="end" class="oxn">${Math.round(maxN*(4-g)/4)}</text>`;
-    s += `<text x="${W-pr+8}" y="${y+4}" fill="#3f6a80" font-size="11" class="oxn">${fmt(Math.round(maxP*(4-g)/4))}</text>`;}
-  M.forEach((d,i)=>{
-    const h = ih*(d.n/maxN);
-    s += `<rect x="${x(i)-bw/2}" y="${yN(d.n)}" width="${bw}" height="${h}" fill="${d.m>='2026-05'?'rgba(249,158,26,.85)':'rgba(249,158,26,.35)'}"><title>${d.m}：${d.n} 条 / ${fmt(d.plays)} 播放</title></rect>`;
-    if(i%2===0) s += `<text x="${x(i)}" y="${H-14}" fill="#6b7c90" font-size="10.5" text-anchor="middle" class="oxn">${d.m.slice(2).replace('-','.')}</text>`;
-    if(events[d.m]){
-      s += `<line x1="${x(i)}" y1="${pt-4}" x2="${x(i)}" y2="${pt+ih}" stroke="rgba(63,182,227,.35)" stroke-dasharray="2 4"/>`;
-      s += `<text x="${x(i)}" y="${pt-10}" fill="#3fb6e3" font-size="11" text-anchor="middle">${events[d.m]}</text>`;}
-  });
-  const pts = M.map((d,i)=>`${x(i)},${yP(d.plays)}`).join(' ');
-  s += `<polyline points="${pts}" fill="none" stroke="#3fb6e3" stroke-width="2.5" stroke-linejoin="round"/>`;
-  M.forEach((d,i)=>{ s += `<circle cx="${x(i)}" cy="${yP(d.plays)}" r="3" fill="#12161d" stroke="#3fb6e3" stroke-width="2"><title>${d.m}：${fmt(d.plays)} 播放</title></circle>`;});
-  s += `<rect x="${pl}" y="${H-8}" width="10" height="10" fill="rgba(249,158,26,.7)" transform="translate(0,-4) skewX(-8)"/><text x="${pl+16}" y="${H-3}" fill="#9aa7b6" font-size="11">视频数（左轴）</text>`;
-  s += `<line x1="${pl+120}" y1="${H-7}" x2="${pl+144}" y2="${H-7}" stroke="#3fb6e3" stroke-width="2.5"/><text x="${pl+152}" y="${H-3}" fill="#9aa7b6" font-size="11">总播放（右轴）</text>`;
-  s += `</svg>`;
-  $('#trend').innerHTML = s;
-}
+/* 图表按容器实际宽度绘制（viewBox 1 单位 = 1px），窄屏时减少刻度、改为上下排列，保证文字可读 */
+const svgOpen = (W,H,id,title,desc) => `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" style="max-width:100%;height:auto;display:block" role="img" aria-labelledby="${id}-t ${id}-d"><title id="${id}-t">${title}</title><desc id="${id}-d">${esc(desc)}</desc>`;
 
-/* ---------- vs bars ---------- */
-function vs(){
-  const rowsData = [
-    {who:'官方主号「守望先锋」', cls:'org', d:D.acct.find(a=>a.grp==='守望先锋')},
-    {who:'UGC 大盘均值', cls:'', d:D.acct.find(a=>a.grp==='UGC')},
-    {who:'官方电竞号', cls:'dim2', d:D.acct.find(a=>a.grp==='守望先锋电竞')},
-  ];
-  const max = Math.max(...rowsData.map(r=>r.d.avg_play));
-  $('#vs').innerHTML = rowsData.map(r=>`
-    <div class="vsrow ${r.cls}">
-      <div class="who">${r.who}<span class="n">${r.d.n.toLocaleString()} 条视频</span></div>
-      <div class="track"><div class="fill" data-w="${(r.d.avg_play/max*100).toFixed(1)}"></div></div>
-      <div class="val">${fmt(r.d.avg_play)}<small>单条均值播放</small></div>
-    </div>`).join('');
+/* ---------- 图：两次检索样本按发布月份的构成 ---------- */
+function compChart(W){
+  const narrow=W<560, M=D.composition.by_pub_month, H=narrow?250:300, pl=narrow?34:46, pr=8, pt=18, pb=narrow?58:44;
+  const iw=W-pl-pr, ih=H-pt-pb, max=Math.max(...M.flatMap(d=>[d.july,d.replica]));
+  const step=iw/M.length, bw=Math.max(2,step*0.36), y=v=>pt+ih-(v/max)*ih, every=narrow?4:2;
+  let s=svgOpen(W,H,'cc','两次检索样本按发布月份的视频数',D.charts.composition_desc);
+  for(let g=0;g<=4;g++){const yy=pt+ih*g/4;s+=`<line x1="${pl}" y1="${yy}" x2="${W-pr}" y2="${yy}" stroke="#26303e" stroke-dasharray="3 5"/><text x="${pl-6}" y="${yy+4}" fill="#7a8a9d" font-size="11" text-anchor="end" class="oxn">${Math.round(max*(4-g)/4)}</text>`;}
+  M.forEach((d,i)=>{const x=pl+step*i+step/2;
+    s+=`<rect x="${x-bw-0.5}" y="${y(d.july)}" width="${bw}" height="${pt+ih-y(d.july)}" fill="#5f7186"><title>${d.m} 7月样本：${d.july} 条</title></rect>`;
+    s+=`<rect x="${x+0.5}" y="${y(d.replica)}" width="${bw}" height="${pt+ih-y(d.replica)}" fill="rgba(249,158,26,.85)"><title>${d.m} 10月样本：${d.replica} 条</title></rect>`;
+    if(i%every===0) s+=`<text x="${x}" y="${pt+ih+16}" fill="#7a8a9d" font-size="11" text-anchor="middle" class="oxn">${d.m.slice(2).replace('-','.')}</text>`;});
+  const ly=narrow?[H-28,H-8]:[H-6,H-6], lx=narrow?[pl,pl]:[pl,pl+220];
+  s+=`<rect x="${lx[0]}" y="${ly[0]-9}" width="10" height="10" fill="#5f7186"/><text x="${lx[0]+16}" y="${ly[0]}" fill="#a3afbd" font-size="12">7 月样本（${D.meta.baseline_fetch.slice(0,10)} 抓取）</text>`;
+  s+=`<rect x="${lx[1]}" y="${ly[1]-9}" width="10" height="10" fill="rgba(249,158,26,.85)"/><text x="${lx[1]+16}" y="${ly[1]}" fill="#a3afbd" font-size="12">10 月样本（同关键词同设计，${D.meta.cutoff} 抓取）</text></svg>`;
+  return s;
 }
-
-/* ---------- top videos ---------- */
-function topv(){
-  const ai = /sora|AI|神人转场/i, of = new Set(['守望先锋','守望先锋电竞']);
-  $('#topv').innerHTML = `<thead><tr><th scope="col">#</th><th scope="col">标题 / UP主</th><th scope="col" style="text-align:right">播放</th><th scope="col" style="text-align:right">点赞</th><th scope="col" style="text-align:right">发布</th></tr></thead><tbody>`+
-    D.top_videos.map((v,i)=>{
-      const badge = ai.test(v.title) ? '<span class="b-ai">AI二创</span>' : of.has(v.author) ? '<span class="b-of">官方</span>' : '';
-      return `<tr>
-      <td class="rk">${String(i+1).padStart(2,'0')}</td>
-      <td class="ttl">${v.title}${badge}<div class="au">@${v.author}</div></td>
-      <td class="pv">${fmt(v.play)}</td><td class="pv" style="color:#9aa7b6">${fmt(v.likes)}</td>
-      <td class="pv" style="color:#6b7c90">${v.d}</td></tr>`;}).join('')+`</tbody>`;
+/* ---------- 图：同一视频播放增长倍数（按 7 月时的发布时长） ---------- */
+function panelChart(W){
+  const narrow=W<560, B=D.panel.by_age_at_july.filter(b=>b.n), rowH=narrow?50:54, pl=narrow?84:150, pr=narrow?52:170, H=B.length*rowH+44;
+  const max=Math.max(...B.map(b=>b.p75_ratio)), x=v=>pl+(v-1)/(max-1)*(W-pl-pr);
+  let s=svgOpen(W,H,'pc','同一视频播放增长倍数',D.charts.panel_desc);
+  s+=`<line x1="${x(1)}" y1="8" x2="${x(1)}" y2="${H-28}" stroke="#2a3442"/><text x="${x(1)}" y="${H-10}" fill="#7a8a9d" font-size="11" text-anchor="start" class="oxn">1.0×（没涨）</text>`;
+  B.forEach((b,i)=>{const yy=24+i*rowH;
+    s+=`<text x="${pl-10}" y="${yy+4}" fill="#eef2f7" font-size="${narrow?12:13}" text-anchor="end">${esc(b.bucket)}</text><text x="${pl-10}" y="${yy+20}" fill="#7a8a9d" font-size="11" text-anchor="end">n=${b.n}</text>`;
+    s+=`<line x1="${x(b.p25_ratio)}" y1="${yy}" x2="${x(b.p75_ratio)}" y2="${yy}" stroke="rgba(63,182,227,.5)" stroke-width="10"><title>四分位 ${b.p25_ratio}×–${b.p75_ratio}×</title></line>`;
+    s+=`<circle cx="${x(b.median_ratio)}" cy="${yy}" r="7" fill="#f99e1a"><title>中位 ${b.median_ratio}×</title></circle>`;
+    s+=`<text x="${W-pr+10}" y="${yy+5}" fill="#f99e1a" font-size="15" class="oxn">${b.median_ratio}×</text>`;
+    if(!narrow) s+=`<text x="${W-pr+56}" y="${yy+5}" fill="#7a8a9d" font-size="11">7月后新增占 ${b.median_share_after_july}%</text>`;});
+  return s+`</svg>`;
 }
-
-/* ---------- tags ---------- */
-function tags(){
-  const official = new Set(['守望先锋英雄召集','守望先锋不止FPS','守望先锋十周年','OWCS']);
-  const max = Math.max(...D.tags.map(t=>t.n));
-  $('#tags').innerHTML = D.tags.map(t=>`
-    <div class="tagrow ${official.has(t.tag)?'of':''}">
-      <span class="lb">${t.tag}</span>
-      <div class="bar"><i data-w="${(t.n/max*100).toFixed(1)}"></i></div>
-      <span class="ct">${t.n}</span>
-    </div>`).join('');
+/* ---------- 图：7 月以来新发视频的主题（份额 + 同周播放百分位） ---------- */
+function themeChart(W){
+  const narrow=W<560, T=[...D.recent.themes].sort((a,b)=>b.share-a.share), maxS=Math.max(...T.map(t=>t.share));
+  // 宽屏：左右两栏；窄屏：每个主题两行（上行占比条，下行百分位点）
+  const pl=narrow?0:140, shareW=narrow?W-70:400, rowH=narrow?66:40, top=narrow?30:40, H=T.length*rowH+top+20;
+  const px0=narrow?0:pl+shareW+60, pw=narrow?W-30:W-px0-40, px=v=>px0+v/100*pw;
+  let s=svgOpen(W,H,'tc','新发视频主题份额与同周播放百分位',D.charts.theme_desc);
+  s+=narrow?`<text x="0" y="14" fill="#7a8a9d" font-size="11">橙条=样本占比；圆点=同周播放百分位中位（50=居中）</text>`
+           :`<text x="${pl}" y="16" fill="#7a8a9d" font-size="11">样本中占比</text><text x="${px0}" y="16" fill="#7a8a9d" font-size="11">同一周发布的视频里，播放所在百分位（中位数；50=居中）</text>`;
+  T.forEach((t,i)=>{const yy=top+i*rowH, w=(t.share/maxS)*(shareW-70);
+    const by=narrow?yy+10:yy, dy=narrow?yy+38:yy;
+    s+=narrow?`<text x="0" y="${yy}" fill="#eef2f7" font-size="13">${esc(t.theme)}</text>`:`<text x="${pl-12}" y="${yy+5}" fill="#eef2f7" font-size="13" text-anchor="end">${esc(t.theme)}</text>`;
+    s+=`<rect x="${pl}" y="${by-7}" width="${Math.max(w,2)}" height="14" fill="rgba(249,158,26,.75)"><title>${esc(t.theme)}：${t.n} 条，占 ${t.share}%</title></rect><text x="${pl+Math.max(w,2)+8}" y="${by+5}" fill="#a3afbd" font-size="12" class="oxn">${t.share}%（${t.n}）</text>`;
+    if(t.median_pctile_in_week!=null) s+=`<line x1="${px(0)}" y1="${dy}" x2="${px(100)}" y2="${dy}" stroke="#2f3a49"/><line x1="${px(50)}" y1="${dy-6}" x2="${px(50)}" y2="${dy+6}" stroke="#4a5868"/><circle cx="${px(t.median_pctile_in_week)}" cy="${dy}" r="6" fill="${t.median_pctile_in_week>=50?'#3fb6e3':'#5f7186'}"><title>同周百分位中位 ${t.median_pctile_in_week}</title></circle><text x="${Math.min(px(t.median_pctile_in_week)+10,W-26)}" y="${dy-8}" fill="#a3afbd" font-size="11" class="oxn">${t.median_pctile_in_week}</text>`;});
+  if(!narrow) [0,50,100].forEach(v=>s+=`<text x="${px(v)}" y="${H-4}" fill="#7a8a9d" font-size="11" text-anchor="middle" class="oxn">${v}</text>`);
+  return s+`</svg>`;
 }
+const CHARTS={comp:compChart, panel:panelChart, theme:themeChart};
+function drawCharts(){document.querySelectorAll('[data-chart]').forEach(el=>{const W=Math.floor(el.clientWidth); if(W && +el.dataset.w!==W){el.dataset.w=W; el.innerHTML=CHARTS[el.dataset.chart](W);}});}
 
-/* ---------- reveal & bar animation ---------- */
-trend(); vs(); topv(); tags();
-const io = new IntersectionObserver(es=>es.forEach(e=>{
-  if(!e.isIntersecting) return;
-  e.target.classList.add('in');
-  e.target.querySelectorAll('[data-cnt]').forEach(countUp);
-  e.target.querySelectorAll('.fill,[data-w]').forEach(el=>{ el.style.width = (el.dataset.w||0)+'%'; });
-  io.unobserve(e.target);
-}),{threshold:.2});
-document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+function render(){
+  const m=D.meta;
+  document.title = m.title;
+  let h=`<div class="topbar"><div class="brand"><span class="dot" aria-hidden="true"></span><span class="disp" style="font-size:15px">OW 营销洞察 · 研究更新</span></div>
+  <div class="meta"><span>研究截止 <b class="num">${m.cutoff}</b>（北京时间）</span><span title="${esc(m.baseline_note)}">7 月基线采集 <b class="num">${m.baseline_fetch}</b></span><span>本次采集 <b class="num">${m.snapshot_fetch}</b></span><span>${esc(m.author)}</span></div></div>`;
+  h+=`<div class="hero"><span class="kicker">RESEARCH UPDATE · ${m.cutoff}</span><h1>${m.h1}</h1><p class="sub">${m.sub}</p>
+  <div class="statgrid">${D.stats.map(s=>`<div class="stat"><div class="v num">${s.v}${s.unit?`<em>${esc(s.unit)}</em>`:''}</div><div class="k">${esc(s.k)}</div></div>`).join('')}</div>
+  <nav class="toc" aria-label="目录">${D.toc.map(t=>`<a href="#${t[0]}">${esc(t[1])}</a>`).join('')}</nav></div>`;
+
+  // 01 核心发现
+  h+=sec('find','01','核心发现', D.leads.find, `<div class="finds">${D.findings.map((f,i)=>`<article class="find"><div class="idx num">${String(i+1).padStart(2,'0')}</div><h3>${esc(f.title)} ${ev(f.strength)}</h3><dl>
+    <dt>观察到的事实</dt><dd>${srcRefs(f.fact)}</dd><dt>解释</dt><dd>${esc(f.interpretation)}</dd><dt>其他可能</dt><dd>${esc(f.alternatives)}</dd>
+    <dt>对营销的意义</dt><dd>${esc(f.meaning)}</dd><dt>下一步</dt><dd>${esc(f.next)}</dd></dl></article>`).join('')}</div>`);
+
+  // 02 时间线
+  h+=sec('tl','02','7 月以来的节点（已核验）', D.leads.timeline, `<div class="tl">${D.timeline.map(n=>`<div class="node${n.future?' future':''}"${n.future?` data-status="${esc(n.status)}"`:''}><div class="d">${esc(n.event_time)}</div><div class="t">${esc(n.title)}</div><div class="s">${esc(n.detail)}</div><div class="src">${n.source_type==='官方'?'<span class="ev src-off">官方</span>':'<span class="ev src-3rd">'+esc(n.source_type)+'</span>'} 来源发布 ${esc(n.source_published)} · ${srcLink(n.source_id)}</div></div>`).join('')}</div>`);
+
+  // 03 旧结论核验
+  h+=sec('fix','03','旧结论核验：哪些要改', D.leads.corrections, `<div class="card">${table([{h:'7 月报告的说法'},{h:'核验结果'},{h:'依据'}],
+    D.corrections.map(c=>[`<b>${esc(c.old)}</b>`, `<b style="color:${c.status==='保留'?'var(--grn)':c.status==='修正'?'var(--org)':'var(--red)'}">${esc(c.status)}</b>`, esc(c.why)]))}</div>`);
+
+  // 04 样本组成
+  const C=D.composition;
+  h+=sec('sample','04','检索样本不是总量：两次抓取比什么、不比什么', D.leads.composition, `<div class="card"><figure><div data-chart="comp"></div><figcaption>${D.charts.composition_caption}</figcaption></figure>
+    <details><summary>查看数据</summary><div class="inner">${table([{h:'发布月份'},{h:'7 月样本',n:1},{h:'10 月样本',n:1}], C.by_pub_month.map(d=>[d.m,d.july,d.replica]))}</div></details>
+    <div class="callout warn"><span aria-hidden="true">⚠</span><div><b>口径：</b>${esc(D.charts.composition_note)}</div></div></div>`);
+
+  // 05 面板
+  h+=sec('panel','05','同一视频：累计播放会一直长', D.leads.panel, `<div class="card"><figure><div data-chart="panel"></div><figcaption>${D.charts.panel_caption}</figcaption></figure>
+    <details><summary>查看数据（含 7 月 TOP10 的变化）</summary><div class="inner">${table([{h:'7 月时发布时长'},{h:'样本数',n:1},{h:'中位倍数',n:1},{h:'四分位区间'},{h:'现播放中 7 月后新增占比',n:1}],
+      D.panel.by_age_at_july.map(b=>[b.bucket,b.n,b.median_ratio+'×',`${b.p25_ratio}×–${b.p75_ratio}×`,b.median_share_after_july+'%']))}
+      ${table([{h:'7 月 TOP10 视频'},{h:'发布'},{h:'7 月播放',n:1},{h:'现在播放',n:1},{h:'倍数',n:1}], D.panel.july_top10.map(v=>[esc(v.title),v.pub,fmt(v.play_july),fmt(v.play_now),v.ratio+'×']))}</div></details></div>`);
+
+  // 06 新发视频
+  const R=D.recent;
+  h+=sec('recent','06','7 月以来新发视频在讲什么', D.leads.recent, `<div class="card"><figure><div data-chart="theme"></div><figcaption>${D.charts.theme_caption}</figcaption></figure>
+    <details><summary>查看数据与示例标题</summary><div class="inner">${table([{h:'主题'},{h:'条数',n:1},{h:'占比',n:1},{h:'同周百分位中位',n:1},{h:'同周排名靠前的示例'}], R.themes.map(t=>[t.theme,t.n,t.share+'%',t.median_pctile_in_week??'–',t.examples.map(esc).join('<br>')]))}</div></details></div>
+    <div class="card" style="margin-top:14px">${table([{h:'#'},{h:'标题 / UP 主'},{h:'播放',n:1},{h:'发布'},{h:'已发布天数',n:1}], R.top_videos.slice(0,10).map((v,i)=>[String(i+1).padStart(2,'0'),
+      `${esc(v.title)}${v.official?'<span class="tag of">官方号</span>':''}${v.title_has_ow?'':'<span class="tag" title="标题没有 OW 字样，因标签含守望先锋而纳入">按标签纳入</span>'}<br><span style="font-size:12px;color:var(--dim)">@${esc(v.author)}</span> ${v.themes.map(t=>`<span class="tag">${esc(t)}</span>`).join('')}`, fmt(v.play), v.pub, v.age_days]))}
+      <div class="callout warn"><span aria-hidden="true">⚠</span><div><b>读法：</b>${esc(D.charts.top_note)}</div></div></div>`);
+
+  // 07 玩家之声
+  const V=D.voice;
+  h+=sec('voice','07','玩家之声：高赞评论里出现了什么', D.leads.voice, `<div class="grid2">${V.themes.map(t=>`<div class="box"><h3>${esc(t.theme)} <span style="font-size:12px;color:var(--dim);font-weight:400">复核后 ${t.n} 条</span></h3><p>${esc(t.reading)}</p>
+    ${t.examples.length?`<span class="lbl">评论摘录（不含用户名）</span>${t.examples.map(e=>`<p>「${esc(e.excerpt)}」<span style="color:var(--dim);font-size:12px"> · ${e.like} 赞 · ${esc(e.stance)}</span></p>`).join('')}`:''}</div>`).join('')}</div>
+    <div class="callout warn"><span aria-hidden="true">⚠</span><div><b>边界：</b>${esc(V.note)}</div></div>`);
+
+  // 08 人群框架
+  h+=sec('seg','08','人群框架：只写有证据的部分', D.leads.segments, `<div class="grid2">${D.segments.map(s=>`<div class="box${s.supported?'':' muted'}"><span class="anchor">${esc(s.evidence_level)}</span><h3>${esc(s.name)}</h3>
+    ${s.supported?`<span class="lbl">当前情境</span><p>${esc(s.situation)}</p><span class="lbl">具体阻力</span><p>${esc(s.friction)}</p><span class="lbl">他们现在的替代选择</span><p>${esc(s.alternative)}</p><span class="lbl">可能有效的传播主张</span><p><b>${esc(s.message)}</b></p><span class="lbl">证据</span><p>${srcRefs(s.evidence)}</p>`
+    :`<p>${esc(s.why_not)}</p>`}</div>`).join('')}</div>`);
+
+  // 09 建议与指标
+  const P=D.priority;
+  h+=sec('rec','09','优先营销建议与衡量方式', D.leads.priority, `<div class="box"><span class="anchor">建议 · 未验证</span><h3>${esc(P.title)}</h3><p>${esc(P.what)}</p><span class="lbl">为什么是它</span><p>${srcRefs(P.why)}</p>
+    <div class="metric"><dl><dt>北极星</dt><dd><b>${esc(P.north_star.name)}</b></dd><dt>定义</dt><dd>${esc(P.north_star.definition)}</dd><dt>分母</dt><dd>${esc(P.north_star.denominator)}</dd><dt>观察窗口</dt><dd>${esc(P.north_star.window)}</dd><dt>数据取得</dt><dd>${esc(P.north_star.data)}</dd><dt>不能证明</dt><dd>${esc(P.north_star.cannot_prove)}</dd></dl></div>
+    <div class="metric"><span class="lbl" style="margin-top:0">护栏</span>${P.guardrails.map(g=>`<p>· <b>${esc(g.name)}</b>：${esc(g.definition)}</p>`).join('')}</div>
+    <div class="metric"><span class="lbl" style="margin-top:0">没有后台数据时的代理指标</span>${P.proxies.map(g=>`<p>· <b>${esc(g.name)}</b>：${esc(g.definition)} <span style="color:var(--dim)">不能证明：${esc(g.cannot_prove)}</span></p>`).join('')}</div></div>
+    <h3 style="margin:26px 0 10px">个人可执行的小规模实验</h3>
+    <div class="box"><span class="anchor">${esc(D.experiment.node)}</span><h3>${esc(D.experiment.title)}</h3>
+    <span class="lbl">为什么选这个节点</span><p>${srcRefs(D.experiment.why_node)}</p>
+    <span class="lbl">目标人群</span><p>${esc(D.experiment.audience)}</p><span class="lbl">核心信息</span><p><b>${esc(D.experiment.message)}</b></p>
+    <span class="lbl">内容与渠道</span><p>${esc(D.experiment.content)}</p><span class="lbl">执行顺序</span><ol class="steps">${D.experiment.steps.map(x=>`<li>${esc(x)}</li>`).join('')}</ol>
+    <span class="lbl">观察信号</span><ol class="steps">${D.experiment.signals.map(x=>`<li>${esc(x)}</li>`).join('')}</ol>
+    <span class="lbl">停止或调整条件</span><p>${esc(D.experiment.stop_rule)}</p></div>`);
+
+  // 10 内容选题
+  h+=sec('topics','10','三个值得实际制作的内容选题', D.leads.topics, `<div class="grid3">${D.topics.map((t,i)=>`<div class="box"><div class="num" style="font-size:28px;font-style:italic;color:transparent;-webkit-text-stroke:1px var(--org);line-height:1">${String(i+1).padStart(2,'0')}</div><h3 style="margin-top:10px">${esc(t.title)}</h3>
+    <span class="lbl">给谁看</span><p>${esc(t.audience)}</p><span class="lbl">解决什么问题</span><p>${esc(t.problem)}</p><span class="lbl">开场切入</span><p><b>${esc(t.hook)}</b></p>
+    <span class="lbl">需要的素材</span><p>${esc(t.materials)}</p><span class="lbl">发布渠道</span><p>${esc(t.channel)}</p><span class="lbl">为什么值得做</span><p>${srcRefs(t.why)}</p><span class="lbl">最难成立的地方</span><p>${esc(t.risk)}</p></div>`).join('')}</div>`);
+
+  // 11 方法与来源
+  h+=sec('method','11','方法、来源与限制', D.leads.method, `<div class="grid2"><div class="box"><h3>采集情况</h3>${table([{h:'来源'},{h:'状态'},{h:'说明'}], D.fetch_summary.map(f=>[esc(f.source), `<b style="color:${f.ok?'var(--grn)':'var(--red)'}">${esc(f.status)}</b>`, esc(f.detail)]))}</div>
+    <div class="box"><h3>主要限制</h3>${D.limits.map(x=>`<p>· ${esc(x)}</p>`).join('')}</div></div>
+    <details><summary>全部来源与证据（${D.sources.length} 条，含事件时间 / 来源发布时间 / 采集时间）</summary><div class="inner">${table([{h:'ID'},{h:'主张'},{h:'事件时间'},{h:'来源发布'},{h:'采集时间'},{h:'来源类型'}],
+      D.sources.map(s=>[s.url?`<a href="${esc(s.url)}" target="_blank" rel="noopener">${s.id}</a>`:s.id, esc(s.claim), esc(s.event_time), esc(s.source_published), esc(s.fetched_at||'–'), esc(s.source_type)]))}</div></details>
+    <details><summary>清洗规则与复跑步骤</summary><div class="inner">${D.method_notes.map(x=>`<p>· ${esc(x)}</p>`).join('')}</div></details>`);
+
+  h+=`<footer><div>OW Marketing Insight · 个人研究项目 · 与暴雪娱乐 / 网易无隶属关系，不使用任何官方美术资产 · 历史版本：<a href="archive/2026-07-24_index.html">2026-07 基线报告</a></div><div>${esc(m.author)} · <a href="https://github.com/Martin-cell-blip">github.com/Martin-cell-blip</a></div></footer>`;
+  $('#app').innerHTML = h;
+}
+render();
+drawCharts();
+// 正文由脚本渲染，浏览器加载时找不到锚点；渲染完再跳到 #hash 对应的节
+function toHash(){const t=location.hash&&document.getElementById(decodeURIComponent(location.hash.slice(1))); if(t) t.scrollIntoView({behavior:'instant'});}
+toHash(); document.fonts.ready.then(toHash);  // 网络字体晚到会重排，加载完再对准一次
+let rz; addEventListener('resize',()=>{cancelAnimationFrame(rz); rz=requestAnimationFrame(drawCharts);});
 </script>
 </body>
 </html>

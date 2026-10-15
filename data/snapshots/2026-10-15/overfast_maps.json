@@ -1,0 +1,602 @@
+{
+ "_meta": {
+  "fetched_at": "2026-10-15T04:43:54.638750+00:00",
+  "source": "https://overfast-api.tekrop.fr"
+ },
+ "data": [
+  {
+   "key": "aatlis",
+   "name": "Aatlis",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/aatlis.jpg",
+   "gamemodes": [
+    "flashpoint"
+   ],
+   "location": "Morocco",
+   "country_code": "MA"
+  },
+  {
+   "key": "antarctic-peninsula",
+   "name": "Antarctic Peninsula",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/antarctic-peninsula.jpg",
+   "gamemodes": [
+    "control"
+   ],
+   "location": "Antarctica",
+   "country_code": "AQ"
+  },
+  {
+   "key": "anubis",
+   "name": "Temple of Anubis",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/anubis.jpg",
+   "gamemodes": [
+    "assault"
+   ],
+   "location": "Giza Plateau, Egypt",
+   "country_code": "EG"
+  },
+  {
+   "key": "arena-victoriae",
+   "name": "Arena Victoriae",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/arena-victoriae.jpg",
+   "gamemodes": [
+    "control"
+   ],
+   "location": "Colosseo, Rome, Italy",
+   "country_code": "IT"
+  },
+  {
+   "key": "ayutthaya",
+   "name": "Ayutthaya",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/ayutthaya.jpg",
+   "gamemodes": [
+    "capture-the-flag"
+   ],
+   "location": "Thailand",
+   "country_code": "TH"
+  },
+  {
+   "key": "black-forest",
+   "name": "Black Forest",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/black-forest.jpg",
+   "gamemodes": [
+    "elimination"
+   ],
+   "location": "Germany",
+   "country_code": "DE"
+  },
+  {
+   "key": "blizzard-world",
+   "name": "Blizzard World",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/blizzard-world.jpg",
+   "gamemodes": [
+    "hybrid"
+   ],
+   "location": "Irvine, California, United States",
+   "country_code": "US"
+  },
+  {
+   "key": "busan",
+   "name": "Busan",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/busan.jpg",
+   "gamemodes": [
+    "control"
+   ],
+   "location": "South Korea",
+   "country_code": "KR"
+  },
+  {
+   "key": "castillo",
+   "name": "Castillo",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/castillo.jpg",
+   "gamemodes": [
+    "elimination"
+   ],
+   "location": "Mexico",
+   "country_code": "MX"
+  },
+  {
+   "key": "chateau-guillard",
+   "name": "Château Guillard",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/chateau-guillard.jpg",
+   "gamemodes": [
+    "deathmatch",
+    "team-deathmatch"
+   ],
+   "location": "Annecy, France",
+   "country_code": "FR"
+  },
+  {
+   "key": "circuit-royal",
+   "name": "Circuit Royal",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/circuit-royal.jpg",
+   "gamemodes": [
+    "escort"
+   ],
+   "location": "Monte Carlo, Monaco",
+   "country_code": "MC"
+  },
+  {
+   "key": "colosseo",
+   "name": "Colosseo",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/colosseo.jpg",
+   "gamemodes": [
+    "push"
+   ],
+   "location": "Rome, Italy",
+   "country_code": "IT"
+  },
+  {
+   "key": "dorado",
+   "name": "Dorado",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/dorado.jpg",
+   "gamemodes": [
+    "escort"
+   ],
+   "location": "Mexico",
+   "country_code": "MX"
+  },
+  {
+   "key": "ecopoint-antarctica",
+   "name": "Ecopoint: Antarctica",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/ecopoint-antarctica.jpg",
+   "gamemodes": [
+    "elimination"
+   ],
+   "location": "Antarctica",
+   "country_code": "AQ"
+  },
+  {
+   "key": "eichenwalde",
+   "name": "Eichenwalde",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/eichenwalde.jpg",
+   "gamemodes": [
+    "hybrid"
+   ],
+   "location": "Stuttgart, Germany",
+   "country_code": "DE"
+  },
+  {
+   "key": "esperanca",
+   "name": "Esperança",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/esperanca.jpg",
+   "gamemodes": [
+    "push"
+   ],
+   "location": "Portugal",
+   "country_code": "PT"
+  },
+  {
+   "key": "gogadoro",
+   "name": "Gogadoro",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/gogadoro.jpg",
+   "gamemodes": [
+    "control"
+   ],
+   "location": "Busan, South Korea",
+   "country_code": "KR"
+  },
+  {
+   "key": "hanamura",
+   "name": "Hanamura",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/hanamura.jpg",
+   "gamemodes": [
+    "assault"
+   ],
+   "location": "Tokyo, Japan",
+   "country_code": "JP"
+  },
+  {
+   "key": "hanaoka",
+   "name": "Hanaoka",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/hanaoka.jpg",
+   "gamemodes": [
+    "clash"
+   ],
+   "location": "Tokyo, Japan",
+   "country_code": "JP"
+  },
+  {
+   "key": "havana",
+   "name": "Havana",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/havana.jpg",
+   "gamemodes": [
+    "escort"
+   ],
+   "location": "Havana, Cuba",
+   "country_code": "CU"
+  },
+  {
+   "key": "hollywood",
+   "name": "Hollywood",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/hollywood.jpg",
+   "gamemodes": [
+    "hybrid"
+   ],
+   "location": "Los Angeles, United States",
+   "country_code": "US"
+  },
+  {
+   "key": "horizon",
+   "name": "Horizon Lunar Colony",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/horizon.jpg",
+   "gamemodes": [
+    "assault"
+   ],
+   "location": "Earth's moon",
+   "country_code": null
+  },
+  {
+   "key": "ilios",
+   "name": "Ilios",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/ilios.jpg",
+   "gamemodes": [
+    "control"
+   ],
+   "location": "Greece",
+   "country_code": "GR"
+  },
+  {
+   "key": "junkertown",
+   "name": "Junkertown",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/junkertown.jpg",
+   "gamemodes": [
+    "escort"
+   ],
+   "location": "Central Australia",
+   "country_code": "AU"
+  },
+  {
+   "key": "lijiang-tower",
+   "name": "Lijiang Tower",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/lijiang-tower.jpg",
+   "gamemodes": [
+    "control"
+   ],
+   "location": "China",
+   "country_code": "CN"
+  },
+  {
+   "key": "kanezaka",
+   "name": "Kanezaka",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/kanezaka.jpg",
+   "gamemodes": [
+    "deathmatch",
+    "team-deathmatch"
+   ],
+   "location": "Tokyo, Japan",
+   "country_code": "JP"
+  },
+  {
+   "key": "kings-row",
+   "name": "King’s Row",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/kings-row.jpg",
+   "gamemodes": [
+    "hybrid"
+   ],
+   "location": "London, United Kingdom",
+   "country_code": "UK"
+  },
+  {
+   "key": "malevento",
+   "name": "Malevento",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/malevento.jpg",
+   "gamemodes": [
+    "deathmatch",
+    "team-deathmatch"
+   ],
+   "location": "Italy",
+   "country_code": "IT"
+  },
+  {
+   "key": "midtown",
+   "name": "Midtown",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/midtown.jpg",
+   "gamemodes": [
+    "hybrid"
+   ],
+   "location": "New York, United States",
+   "country_code": "US"
+  },
+  {
+   "key": "necropolis",
+   "name": "Necropolis",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/necropolis.jpg",
+   "gamemodes": [
+    "elimination"
+   ],
+   "location": "Egypt",
+   "country_code": "EG"
+  },
+  {
+   "key": "nepal",
+   "name": "Nepal",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/nepal.jpg",
+   "gamemodes": [
+    "control"
+   ],
+   "location": "Nepal",
+   "country_code": "NP"
+  },
+  {
+   "key": "neon-junction",
+   "name": "Neon Junction",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/neon-junction.jpg",
+   "gamemodes": [
+    "hybrid"
+   ],
+   "location": "Japan",
+   "country_code": "JP"
+  },
+  {
+   "key": "new-junk-city",
+   "name": "New Junk City",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/new-junk-city.jpg",
+   "gamemodes": [
+    "flashpoint"
+   ],
+   "location": "Central Australia",
+   "country_code": "AU"
+  },
+  {
+   "key": "new-queen-street",
+   "name": "New Queen Street",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/new-queen-street.jpg",
+   "gamemodes": [
+    "push"
+   ],
+   "location": "Toronto, Canada",
+   "country_code": "CA"
+  },
+  {
+   "key": "numbani",
+   "name": "Numbani",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/numbani.jpg",
+   "gamemodes": [
+    "hybrid"
+   ],
+   "location": "Numbani (near Nigeria)",
+   "country_code": null
+  },
+  {
+   "key": "oasis",
+   "name": "Oasis",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/oasis.jpg",
+   "gamemodes": [
+    "control"
+   ],
+   "location": "Iraq",
+   "country_code": "IQ"
+  },
+  {
+   "key": "paraiso",
+   "name": "Paraíso",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/paraiso.jpg",
+   "gamemodes": [
+    "hybrid"
+   ],
+   "location": "Rio de Janeiro, Brazil",
+   "country_code": "BR"
+  },
+  {
+   "key": "paris",
+   "name": "Paris",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/paris.jpg",
+   "gamemodes": [
+    "assault"
+   ],
+   "location": "Paris, France",
+   "country_code": "FR"
+  },
+  {
+   "key": "petra",
+   "name": "Petra",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/petra.jpg",
+   "gamemodes": [
+    "deathmatch",
+    "team-deathmatch"
+   ],
+   "location": "Southern Jordan",
+   "country_code": "JO"
+  },
+  {
+   "key": "place-lacroix",
+   "name": "Place Lacroix",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/place-lacroix.jpg",
+   "gamemodes": [
+    "push"
+   ],
+   "location": "Paris, France",
+   "country_code": "FR"
+  },
+  {
+   "key": "powder-keg-mine",
+   "name": "Powder Keg Mine",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/powder-keg-mine.jpg",
+   "gamemodes": [
+    "payload-race"
+   ],
+   "location": "Deadlock Gorge, Arizona, United States",
+   "country_code": "US"
+  },
+  {
+   "key": "practice-range",
+   "name": "Practice Range",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/practice-range.jpg",
+   "gamemodes": [
+    "practice-range"
+   ],
+   "location": "Swiss HQ",
+   "country_code": "CH"
+  },
+  {
+   "key": "redwood-dam",
+   "name": "Redwood Dam",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/redwood-dam.jpg",
+   "gamemodes": [
+    "push"
+   ],
+   "location": "Gibraltar",
+   "country_code": "GI"
+  },
+  {
+   "key": "rialto",
+   "name": "Rialto",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/rialto.jpg",
+   "gamemodes": [
+    "escort"
+   ],
+   "location": "Venice, Italy",
+   "country_code": "IT"
+  },
+  {
+   "key": "route-66",
+   "name": "Route 66",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/route-66.jpg",
+   "gamemodes": [
+    "escort"
+   ],
+   "location": "Albuquerque, New Mexico, United States",
+   "country_code": "US"
+  },
+  {
+   "key": "runasapi",
+   "name": "Runasapi",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/runasapi.jpg",
+   "gamemodes": [
+    "push"
+   ],
+   "location": "Peru",
+   "country_code": "PE"
+  },
+  {
+   "key": "samoa",
+   "name": "Samoa",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/samoa.jpg",
+   "gamemodes": [
+    "control"
+   ],
+   "location": "Samoa",
+   "country_code": "WS"
+  },
+  {
+   "key": "shambali-monastery",
+   "name": "Shambali Monastery",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/shambali-monastery.jpg",
+   "gamemodes": [
+    "escort"
+   ],
+   "location": "Nepal",
+   "country_code": "NP"
+  },
+  {
+   "key": "suravasa",
+   "name": "Suravasa",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/suravasa.jpg",
+   "gamemodes": [
+    "flashpoint"
+   ],
+   "location": "India",
+   "country_code": "IN"
+  },
+  {
+   "key": "thames-district",
+   "name": "Thames District",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/thames-district.jpg",
+   "gamemodes": [
+    "payload-race"
+   ],
+   "location": "London, United Kingdom",
+   "country_code": "UK"
+  },
+  {
+   "key": "throne-of-anubis",
+   "name": "Throne of Anubis",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/throne-of-anubis.jpg",
+   "gamemodes": [
+    "clash"
+   ],
+   "location": "Giza Plateau, Egypt",
+   "country_code": "EG"
+  },
+  {
+   "key": "volskaya",
+   "name": "Volskaya Industries",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/volskaya.jpg",
+   "gamemodes": [
+    "assault"
+   ],
+   "location": "St. Petersburg, Russia",
+   "country_code": "RU"
+  },
+  {
+   "key": "watchpoint-gibraltar",
+   "name": "Watchpoint: Gibraltar",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/watchpoint-gibraltar.jpg",
+   "gamemodes": [
+    "escort"
+   ],
+   "location": "Gibraltar",
+   "country_code": "GI"
+  },
+  {
+   "key": "watchpoint-grimsvotn",
+   "name": "Watchpoint: Grimsvotn",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/watchpoint-grimsvotn.jpg",
+   "gamemodes": [
+    "escort"
+   ],
+   "location": "Iceland",
+   "country_code": "IS"
+  },
+  {
+   "key": "workshop-chamber",
+   "name": "Workshop Chamber",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/workshop-chamber.jpg",
+   "gamemodes": [
+    "workshop"
+   ],
+   "location": "Earth",
+   "country_code": null
+  },
+  {
+   "key": "workshop-expanse",
+   "name": "Workshop Expanse",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/workshop-expanse.jpg",
+   "gamemodes": [
+    "workshop"
+   ],
+   "location": "Earth",
+   "country_code": null
+  },
+  {
+   "key": "workshop-green-screen",
+   "name": "Workshop Green Screen",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/workshop-green-screen.jpg",
+   "gamemodes": [
+    "workshop"
+   ],
+   "location": "Earth",
+   "country_code": null
+  },
+  {
+   "key": "workshop-island",
+   "name": "Workshop Island",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/workshop-island.jpg",
+   "gamemodes": [
+    "workshop"
+   ],
+   "location": "Earth",
+   "country_code": null
+  },
+  {
+   "key": "wuxing-university",
+   "name": "Wuxing University",
+   "screenshot": "https://overfast-api.tekrop.fr/static/maps/wuxing-university.jpg",
+   "gamemodes": [
+    "control"
+   ],
+   "location": "Chengdu, Sichuan, China",
+   "country_code": "CN"
+  }
+ ]
+}

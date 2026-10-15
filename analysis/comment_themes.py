@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
-"""B 站热评样本主题词频（v2 玩家痛点模块）。"""
+"""B 站热评样本主题词频（2026-07 版，保留作历史）。
+
+关键词命中只是初筛：不处理否定、引用和玩梗语境，不能直接解释为情绪或痛点。
+2026-10 起改为 analyze_update.py 初筛 + code_comments_<日期>.py 逐条人工复核。
+"""
 import json
 import re
 from pathlib import Path

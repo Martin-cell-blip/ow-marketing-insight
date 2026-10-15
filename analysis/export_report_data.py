@@ -4,7 +4,7 @@
   R1 剔除挂机/蹭激励计划 spam（tag 含创作者激励计划 且 play<=100）
   R2 相关性过滤：title 或 tag 必含 OW 词根（守望/overwatch/owcs/ow2/独立词 ow）
      —— 修复 OWCS 关键词混入的英雄联盟内容（TES/MSI 等）
-输出: report/data.json
+输出: report/archive/2026-07-24_data.json（7 月历史基线，保留可复跑；当前看板见 analysis/analyze_update.py）
 """
 import json
 import re
@@ -14,7 +14,7 @@ import duckdb
 
 ROOT = Path(__file__).resolve().parent.parent
 DB = ROOT / "data" / "ow.duckdb"
-OUT = ROOT / "report" / "data.json"
+OUT = ROOT / "report" / "archive" / "2026-07-24_data.json"
 
 OFFICIAL = ["守望先锋", "守望先锋电竞", "暴雪游戏", "网易暴雪"]
 

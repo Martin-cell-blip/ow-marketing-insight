@@ -1,0 +1,30 @@
+[
+ {
+  "mid": 1886758040,
+  "code": 0,
+  "name": "守望先锋",
+  "official": {
+   "role": 3,
+   "title": "《守望先锋》官方视频号",
+   "desc": "",
+   "type": 1
+  },
+  "fans": 511038,
+  "archive_count": 315,
+  "fetched_at": "2026-10-15T13:06:07+08:00"
+ },
+ {
+  "mid": 365902357,
+  "code": 0,
+  "name": "守望先锋电竞",
+  "official": {
+   "role": 3,
+   "title": "守望先锋电竞官方账号",
+   "desc": "",
+   "type": 1
+  },
+  "fans": 402477,
+  "archive_count": 1516,
+  "fetched_at": "2026-10-15T13:06:08+08:00"
+ }
+]

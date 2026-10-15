@@ -1,0 +1,2506 @@
+{
+ "snapshot": "2026-10-15",
+ "cutoff_bjt": "2026-10-15",
+ "baseline_fetched_bjt": "2026-07-23 01:10",
+ "window": [
+  "2026-07-22",
+  "2026-10-15"
+ ],
+ "fetch_log": [
+  {
+   "source": "official_news_cn",
+   "logged_at": "2026-10-15T12:43:54+08:00",
+   "list_pages": [
+    {
+     "url": "https://ow.blizzard.cn/news/",
+     "items": 12
+    },
+    {
+     "url": "https://ow.blizzard.cn/news/index_2.html",
+     "items": 12
+    },
+    {
+     "url": "https://ow.blizzard.cn/news/index_3.html",
+     "items": 12
+    },
+    {
+     "url": "https://ow.blizzard.cn/news/index_4.html",
+     "items": 12
+    },
+    {
+     "url": "https://ow.blizzard.cn/news/index_5.html",
+     "items": 12
+    },
+    {
+     "url": "https://ow.blizzard.cn/news/index_6.html",
+     "items": 12
+    },
+    {
+     "url": "https://ow.blizzard.cn/news/index_7.html",
+     "items": 12
+    },
+    {
+     "url": "https://ow.blizzard.cn/news/index_8.html",
+     "items": 12
+    },
+    {
+     "url": "https://ow.blizzard.cn/owcs/news/",
+     "items": 12
+    }
+   ],
+   "items": 108,
+   "bodies": 31,
+   "note": "source_date=官网列表标注的发布日期（来源发布时间），不是事件发生时间"
+  },
+  {
+   "source": "overfast",
+   "logged_at": "2026-10-15T12:43:59+08:00",
+   "endpoints": [
+    "/heroes",
+    "/roles",
+    "/gamemodes",
+    "/maps"
+   ]
+  },
+  {
+   "source": "liquipedia",
+   "logged_at": "2026-10-15T12:45:47+08:00",
+   "pages": [
+    {
+     "page": "Overwatch_Champions_Series/2026/China/Stage_2",
+     "http": 200,
+     "error": null
+    },
+    {
+     "page": "Overwatch_Champions_Series/2026/China/Stage_3",
+     "http": 200,
+     "error": null
+    },
+    {
+     "page": "Overwatch_Champions_Series/2026/Midseason_Championship",
+     "http": 200,
+     "error": null
+    },
+    {
+     "page": "Overwatch_Champions_Series/2026/World_Finals",
+     "http": 200,
+     "error": null
+    }
+   ],
+   "note": "第三方来源；parse 间隔 31s"
+  },
+  {
+   "source": "bilibili_search",
+   "logged_at": "2026-10-15T12:55:13+08:00",
+   "design": "replica",
+   "order": "totalrank",
+   "runs": [
+    {
+     "design": "replica",
+     "keyword": "守望先锋",
+     "window": null,
+     "max_pages": 50,
+     "pages_fetched": 50,
+     "hits": 1000,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "replica",
+     "keyword": "守望先锋2",
+     "window": null,
+     "max_pages": 50,
+     "pages_fetched": 50,
+     "hits": 1000,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "replica",
+     "keyword": "守望先锋 国服",
+     "window": null,
+     "max_pages": 50,
+     "pages_fetched": 50,
+     "hits": 1000,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "replica",
+     "keyword": "守望先锋 十周年",
+     "window": null,
+     "max_pages": 50,
+     "pages_fetched": 50,
+     "hits": 1000,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "replica",
+     "keyword": "OWCS",
+     "window": null,
+     "max_pages": 50,
+     "pages_fetched": 50,
+     "hits": 1000,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    }
+   ],
+   "note": "由命中表重建：采集进程在 recent 阶段被手动停止，replica/extension 已完整跑完但日志在进程末尾才写，故按命中表统计页数与命中数补记"
+  },
+  {
+   "source": "bilibili_search",
+   "logged_at": "2026-10-15T12:55:13+08:00",
+   "design": "extension",
+   "order": "totalrank",
+   "runs": [
+    {
+     "design": "extension",
+     "keyword": "守望先锋 回坑",
+     "window": null,
+     "max_pages": 20,
+     "pages_fetched": 20,
+     "hits": 400,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "extension",
+     "keyword": "守望先锋 新手",
+     "window": null,
+     "max_pages": 20,
+     "pages_fetched": 20,
+     "hits": 400,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "extension",
+     "keyword": "守望先锋 新赛季",
+     "window": null,
+     "max_pages": 20,
+     "pages_fetched": 20,
+     "hits": 400,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "extension",
+     "keyword": "守望先锋 血律",
+     "window": null,
+     "max_pages": 20,
+     "pages_fetched": 20,
+     "hits": 400,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "extension",
+     "keyword": "OWCS 中国",
+     "window": null,
+     "max_pages": 20,
+     "pages_fetched": 20,
+     "hits": 400,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    }
+   ],
+   "note": "由命中表重建：采集进程在 recent 阶段被手动停止，replica/extension 已完整跑完但日志在进程末尾才写，故按命中表统计页数与命中数补记"
+  },
+  {
+   "source": "bilibili_search",
+   "logged_at": "2026-10-15T12:55:13+08:00",
+   "design": "recent_pubdate_abandoned",
+   "order": "pubdate",
+   "runs": [
+    {
+     "keyword": "守望先锋",
+     "pages_fetched": 50,
+     "hits": 1000,
+     "earliest_pub": "2026-10-13T22:34:28+08:00"
+    },
+    {
+     "keyword": "守望先锋2",
+     "pages_fetched": 7,
+     "hits": 128,
+     "earliest_pub": "2026-10-11T19:58:54+08:00"
+    }
+   ],
+   "note": "按发布时间倒序翻页的设计已放弃：「守望先锋」37 页只回溯到前一天，50 页上限无法覆盖 7-22 起的窗口；这些命中已从命中表删除，改用 weekly 按周切窗"
+  },
+  {
+   "source": "bilibili_search",
+   "logged_at": "2026-10-15T13:00:14+08:00",
+   "design": "weekly",
+   "order": "totalrank",
+   "runs": [
+    {
+     "design": "weekly",
+     "keyword": "守望先锋",
+     "window": [
+      "2026-07-22",
+      "2026-07-29"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋",
+     "window": [
+      "2026-07-29",
+      "2026-08-05"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋",
+     "window": [
+      "2026-08-05",
+      "2026-08-12"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋",
+     "window": [
+      "2026-08-12",
+      "2026-08-19"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋",
+     "window": [
+      "2026-08-19",
+      "2026-08-26"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋",
+     "window": [
+      "2026-08-26",
+      "2026-09-02"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋",
+     "window": [
+      "2026-09-02",
+      "2026-09-09"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋",
+     "window": [
+      "2026-09-09",
+      "2026-09-16"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋",
+     "window": [
+      "2026-09-16",
+      "2026-09-23"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋",
+     "window": [
+      "2026-09-23",
+      "2026-09-30"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋",
+     "window": [
+      "2026-09-30",
+      "2026-10-07"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋",
+     "window": [
+      "2026-10-07",
+      "2026-10-14"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋",
+     "window": [
+      "2026-10-14",
+      "2026-10-16"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 国服",
+     "window": [
+      "2026-07-22",
+      "2026-07-29"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 国服",
+     "window": [
+      "2026-07-29",
+      "2026-08-05"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 国服",
+     "window": [
+      "2026-08-05",
+      "2026-08-12"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 国服",
+     "window": [
+      "2026-08-12",
+      "2026-08-19"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 国服",
+     "window": [
+      "2026-08-19",
+      "2026-08-26"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 国服",
+     "window": [
+      "2026-08-26",
+      "2026-09-02"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 国服",
+     "window": [
+      "2026-09-02",
+      "2026-09-09"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 国服",
+     "window": [
+      "2026-09-09",
+      "2026-09-16"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 国服",
+     "window": [
+      "2026-09-16",
+      "2026-09-23"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 国服",
+     "window": [
+      "2026-09-23",
+      "2026-09-30"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 国服",
+     "window": [
+      "2026-09-30",
+      "2026-10-07"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 国服",
+     "window": [
+      "2026-10-07",
+      "2026-10-14"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 国服",
+     "window": [
+      "2026-10-14",
+      "2026-10-16"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "OWCS",
+     "window": [
+      "2026-07-22",
+      "2026-07-29"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 57,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "OWCS",
+     "window": [
+      "2026-07-29",
+      "2026-08-05"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "OWCS",
+     "window": [
+      "2026-08-05",
+      "2026-08-12"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "OWCS",
+     "window": [
+      "2026-08-12",
+      "2026-08-19"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "OWCS",
+     "window": [
+      "2026-08-19",
+      "2026-08-26"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "OWCS",
+     "window": [
+      "2026-08-26",
+      "2026-09-02"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "OWCS",
+     "window": [
+      "2026-09-02",
+      "2026-09-09"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "OWCS",
+     "window": [
+      "2026-09-09",
+      "2026-09-16"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 2,
+     "hits": 40,
+     "stop_reason": "no_more_results",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "OWCS",
+     "window": [
+      "2026-09-16",
+      "2026-09-23"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "OWCS",
+     "window": [
+      "2026-09-23",
+      "2026-09-30"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "OWCS",
+     "window": [
+      "2026-09-30",
+      "2026-10-07"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "OWCS",
+     "window": [
+      "2026-10-07",
+      "2026-10-14"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "OWCS",
+     "window": [
+      "2026-10-14",
+      "2026-10-16"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 50,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 回坑",
+     "window": [
+      "2026-07-22",
+      "2026-07-29"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 回坑",
+     "window": [
+      "2026-07-29",
+      "2026-08-05"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 回坑",
+     "window": [
+      "2026-08-05",
+      "2026-08-12"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 回坑",
+     "window": [
+      "2026-08-12",
+      "2026-08-19"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 回坑",
+     "window": [
+      "2026-08-19",
+      "2026-08-26"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 回坑",
+     "window": [
+      "2026-08-26",
+      "2026-09-02"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 回坑",
+     "window": [
+      "2026-09-02",
+      "2026-09-09"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 回坑",
+     "window": [
+      "2026-09-09",
+      "2026-09-16"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 回坑",
+     "window": [
+      "2026-09-16",
+      "2026-09-23"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 回坑",
+     "window": [
+      "2026-09-23",
+      "2026-09-30"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 回坑",
+     "window": [
+      "2026-09-30",
+      "2026-10-07"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 回坑",
+     "window": [
+      "2026-10-07",
+      "2026-10-14"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 回坑",
+     "window": [
+      "2026-10-14",
+      "2026-10-16"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 新手",
+     "window": [
+      "2026-07-22",
+      "2026-07-29"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 新手",
+     "window": [
+      "2026-07-29",
+      "2026-08-05"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 新手",
+     "window": [
+      "2026-08-05",
+      "2026-08-12"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 新手",
+     "window": [
+      "2026-08-12",
+      "2026-08-19"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 新手",
+     "window": [
+      "2026-08-19",
+      "2026-08-26"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 新手",
+     "window": [
+      "2026-08-26",
+      "2026-09-02"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 新手",
+     "window": [
+      "2026-09-02",
+      "2026-09-09"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 新手",
+     "window": [
+      "2026-09-09",
+      "2026-09-16"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 新手",
+     "window": [
+      "2026-09-16",
+      "2026-09-23"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 新手",
+     "window": [
+      "2026-09-23",
+      "2026-09-30"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 新手",
+     "window": [
+      "2026-09-30",
+      "2026-10-07"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 新手",
+     "window": [
+      "2026-10-07",
+      "2026-10-14"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    },
+    {
+     "design": "weekly",
+     "keyword": "守望先锋 新手",
+     "window": [
+      "2026-10-14",
+      "2026-10-16"
+     ],
+     "max_pages": 3,
+     "pages_fetched": 3,
+     "hits": 60,
+     "stop_reason": "max_pages",
+     "failed_pages": []
+    }
+   ],
+   "note": "replica=复刻7月；extension=新增关键词；weekly=按周切窗每窗前3页；均为检索样本"
+  },
+  {
+   "source": "bilibili_panel",
+   "logged_at": "2026-10-15T13:04:19+08:00",
+   "status": "failed",
+   "attempt": "view 接口版本",
+   "note": "首轮面板用 /x/web-interface/view：开工前探测已连续返回 412 风控，正式运行第一条即因本机代理断连（ProxyError）退出，未产出任何行；改为按标题搜索、bvid 精确匹配的方案重跑（见下一条 bilibili_panel 记录）"
+  },
+  {
+   "source": "bilibili_comments",
+   "logged_at": "2026-10-15T13:05:55+08:00",
+   "n_target_videos": 150,
+   "videos_ok": 150,
+   "videos_no_comments": 0,
+   "failed": [],
+   "comments": 450,
+   "design": "窗口>=2026-07-22；主题词视频∪播放TOP60，上限150；匿名 reply sort=1 第一页"
+  },
+  {
+   "source": "verification_pages",
+   "logged_at": "2026-10-15T13:07:46+08:00",
+   "pages": [
+    {
+     "id": "S14",
+     "error": "SSLError"
+    }
+   ]
+  },
+  {
+   "source": "verification_pages",
+   "logged_at": "2026-10-15T13:09:30+08:00",
+   "pages": [
+    {
+     "id": "S14",
+     "error": "SSLError"
+    },
+    {
+     "id": "S14",
+     "error": "ReadTimeout"
+    }
+   ]
+  },
+  {
+   "source": "bilibili_comments",
+   "logged_at": "2026-10-15T13:15:00+08:00",
+   "n_target_videos": 150,
+   "videos_ok": 150,
+   "videos_no_comments": 0,
+   "failed": [],
+   "comments": 450,
+   "n_theme_targets": 90,
+   "design": "清洗后OW视频；窗口>=2026-07-22；标题主题词视频优先(≤90)+播放TOP补足，上限150；匿名 reply sort=1 第一页",
+   "note": "替换首轮结果：首轮未过清洗规则，150 个目标视频中仅 69 个为 OW 相关"
+  },
+  {
+   "source": "verification_pages",
+   "logged_at": "2026-10-15T13:23:03+08:00",
+   "pages": [
+    {
+     "id": "S14",
+     "error": null
+    },
+    {
+     "id": "S14",
+     "error": null
+    }
+   ]
+  },
+  {
+   "source": "bilibili_panel",
+   "logged_at": "2026-10-15T13:23:45+08:00",
+   "n_panel": 660,
+   "found": 349,
+   "not_found": 311,
+   "errors": 0,
+   "error_samples": [],
+   "method": "按标题搜索第一页、bvid 精确匹配，读搜索卡片计数",
+   "design": "7月基线2025-02-19后发布随机600条(seed=20261015)+官方mid+7月TOP10",
+   "note": "视频详情接口 view 本日持续 412，未使用"
+  },
+  {
+   "source": "official_news_cn",
+   "logged_at": "2026-10-15T13:25:58+08:00",
+   "list_pages": [
+    {
+     "url": "https://ow.blizzard.cn/news/",
+     "items": 12
+    },
+    {
+     "url": "https://ow.blizzard.cn/news/index_2.html",
+     "items": 12
+    },
+    {
+     "url": "https://ow.blizzard.cn/news/index_3.html",
+     "items": 12
+    },
+    {
+     "url": "https://ow.blizzard.cn/news/index_4.html",
+     "items": 12
+    },
+    {
+     "url": "https://ow.blizzard.cn/news/index_5.html",
+     "items": 12
+    },
+    {
+     "url": "https://ow.blizzard.cn/news/index_6.html",
+     "items": 12
+    },
+    {
+     "url": "https://ow.blizzard.cn/news/index_7.html",
+     "items": 12
+    },
+    {
+     "url": "https://ow.blizzard.cn/news/index_8.html",
+     "items": 12
+    },
+    {
+     "url": "https://ow.blizzard.cn/owcs/news/",
+     "items": 12
+    }
+   ],
+   "items": 108,
+   "bodies": 31,
+   "note": "source_date=官网列表标注的发布日期（来源发布时间），不是事件发生时间"
+  },
+  {
+   "source": "verification_pages",
+   "logged_at": "2026-10-15T13:26:01+08:00",
+   "pages": [
+    {
+     "id": "S14",
+     "error": null
+    },
+    {
+     "id": "S14",
+     "error": null
+    }
+   ]
+  }
+ ],
+ "snapshot_fetch_range": [
+  "2026-10-15T12:44:12+08:00",
+  "2026-10-15T13:26:01+08:00"
+ ],
+ "cleaning": {
+  "july": {
+   "n_raw": 3354,
+   "r1_spam": 13,
+   "r2_not_ow": 161,
+   "kept_cross_game_by_tag": 24,
+   "r2_rescued_by_terms": 7,
+   "n_clean": 3180
+  },
+  "now": {
+   "n_raw": 5598,
+   "r1_spam": 0,
+   "r2_not_ow": 766,
+   "kept_cross_game_by_tag": 119,
+   "r2_rescued_by_terms": 3,
+   "n_clean": 4832
+  }
+ },
+ "composition": {
+  "july": {
+   "n_raw": 3354,
+   "n_clean": 3180,
+   "share_pub_within_30d": 43.0,
+   "share_pub_within_90d": 60.2,
+   "share_pub_before_return": 16.1
+  },
+  "replica": {
+   "n_raw": 3073,
+   "n_clean": 2652,
+   "share_pub_within_30d": 54.9,
+   "share_pub_within_90d": 63.0,
+   "share_pub_before_return": 8.1
+  },
+  "overlap_clean": 579,
+  "only_july_clean": 2601,
+  "only_replica_clean": 2073,
+  "only_replica_pub_before_window": 414,
+  "by_pub_month": [
+   {
+    "m": "2025-01",
+    "july": 51,
+    "replica": 20
+   },
+   {
+    "m": "2025-02",
+    "july": 62,
+    "replica": 21
+   },
+   {
+    "m": "2025-03",
+    "july": 92,
+    "replica": 37
+   },
+   {
+    "m": "2025-04",
+    "july": 46,
+    "replica": 24
+   },
+   {
+    "m": "2025-05",
+    "july": 49,
+    "replica": 24
+   },
+   {
+    "m": "2025-06",
+    "july": 52,
+    "replica": 28
+   },
+   {
+    "m": "2025-07",
+    "july": 28,
+    "replica": 11
+   },
+   {
+    "m": "2025-08",
+    "july": 26,
+    "replica": 13
+   },
+   {
+    "m": "2025-09",
+    "july": 42,
+    "replica": 17
+   },
+   {
+    "m": "2025-10",
+    "july": 33,
+    "replica": 12
+   },
+   {
+    "m": "2025-11",
+    "july": 26,
+    "replica": 9
+   },
+   {
+    "m": "2025-12",
+    "july": 29,
+    "replica": 10
+   },
+   {
+    "m": "2026-01",
+    "july": 53,
+    "replica": 19
+   },
+   {
+    "m": "2026-02",
+    "july": 91,
+    "replica": 34
+   },
+   {
+    "m": "2026-03",
+    "july": 85,
+    "replica": 28
+   },
+   {
+    "m": "2026-04",
+    "july": 75,
+    "replica": 31
+   },
+   {
+    "m": "2026-05",
+    "july": 297,
+    "replica": 216
+   },
+   {
+    "m": "2026-06",
+    "july": 371,
+    "replica": 165
+   },
+   {
+    "m": "2026-07",
+    "july": 1226,
+    "replica": 110
+   },
+   {
+    "m": "2026-08",
+    "july": 0,
+    "replica": 94
+   },
+   {
+    "m": "2026-09",
+    "july": 0,
+    "replica": 192
+   },
+   {
+    "m": "2026-10",
+    "july": 0,
+    "replica": 1345
+   }
+  ]
+ },
+ "panel": {
+  "n_requested": 660,
+  "n_ok": 349,
+  "n_unavailable": 311,
+  "n_random_found": 316,
+  "n_random": 600,
+  "median_play_july_found": 25054,
+  "median_play_july_not_found": 7789,
+  "fetched_now_range": [
+   "2026-10-15T13:06:10+08:00",
+   "2026-10-15T13:23:44+08:00"
+  ],
+  "by_age_at_july": [
+   {
+    "bucket": "发布≤30天",
+    "n": 156,
+    "median_ratio": 1.4,
+    "p25_ratio": 1.15,
+    "p75_ratio": 1.8,
+    "median_share_after_july": 28.3
+   },
+   {
+    "bucket": "31–90天",
+    "n": 59,
+    "median_ratio": 1.09,
+    "p25_ratio": 1.02,
+    "p75_ratio": 1.24,
+    "median_share_after_july": 8.1
+   },
+   {
+    "bucket": "91–365天",
+    "n": 70,
+    "median_ratio": 1.07,
+    "p25_ratio": 1.03,
+    "p75_ratio": 1.16,
+    "median_share_after_july": 7.0
+   },
+   {
+    "bucket": ">365天",
+    "n": 31,
+    "median_ratio": 1.03,
+    "p25_ratio": 1.01,
+    "p75_ratio": 1.06,
+    "median_share_after_july": 2.7
+   }
+  ],
+  "july_top10": [
+   {
+    "bvid": "BV1QGxezYER2",
+    "title": "【sora2】当守望先锋玩家老了就这样2",
+    "play_july": 1777758,
+    "play_now": 1778824,
+    "ratio": 1.0,
+    "pub": "2025-10-08"
+   },
+   {
+    "bvid": "BV1rJVfzDECL",
+    "title": "16年引爆全球的守望先锋!现在到底成啥样了？！",
+    "play_july": 1511050,
+    "play_now": 1514748,
+    "ratio": 1.0,
+    "pub": "2025-05-10"
+   },
+   {
+    "bvid": "BV1aqXrY5Ek7",
+    "title": "守望先锋 x LE SSERAFIM｜联动曲《So Cynical (Badum)》",
+    "play_july": 1489347,
+    "play_now": 1559244,
+    "ratio": 1.05,
+    "pub": "2025-03-21"
+   },
+   {
+    "bvid": "BV1LiGE6yEs6",
+    "title": "夜里最后的执伞人",
+    "play_july": 1188801,
+    "play_now": 1246271,
+    "ratio": 1.05,
+    "pub": "2026-05-24"
+   },
+   {
+    "bvid": "BV1hjj66rER5",
+    "title": "守望先锋中国角色塌房塌到国外 品学兼优的好孩子竟然有纹身？",
+    "play_july": 1139400,
+    "play_now": 1167480,
+    "ratio": 1.02,
+    "pub": "2026-06-20"
+   },
+   {
+    "bvid": "BV1dYEUzfEqC",
+    "title": "朱诺的小曲",
+    "play_july": 1138107,
+    "play_now": 1246776,
+    "ratio": 1.1,
+    "pub": "2025-05-19"
+   }
+  ]
+ },
+ "recent": {
+  "n_clean": 3760,
+  "n_weekly_sample": 2430,
+  "weekly_windows": [
+   {
+    "start": "2026-07-22",
+    "n": 169
+   },
+   {
+    "start": "2026-07-29",
+    "n": 175
+   },
+   {
+    "start": "2026-08-05",
+    "n": 186
+   },
+   {
+    "start": "2026-08-12",
+    "n": 190
+   },
+   {
+    "start": "2026-08-19",
+    "n": 185
+   },
+   {
+    "start": "2026-08-26",
+    "n": 188
+   },
+   {
+    "start": "2026-09-02",
+    "n": 185
+   },
+   {
+    "start": "2026-09-09",
+    "n": 188
+   },
+   {
+    "start": "2026-09-16",
+    "n": 197
+   },
+   {
+    "start": "2026-09-23",
+    "n": 190
+   },
+   {
+    "start": "2026-09-30",
+    "n": 202
+   },
+   {
+    "start": "2026-10-07",
+    "n": 209
+   },
+   {
+    "start": "2026-10-14",
+    "n": 166
+   }
+  ],
+  "by_keyword": {
+   "OWCS": 1308,
+   "守望先锋": 1286,
+   "守望先锋 国服": 1216,
+   "守望先锋 回坑": 885,
+   "守望先锋 新手": 834,
+   "守望先锋2": 526,
+   "守望先锋 血律": 349,
+   "守望先锋 十周年": 335,
+   "守望先锋 新赛季": 310,
+   "OWCS 中国": 194
+  },
+  "themes": [
+   {
+    "theme": "新英雄/新赛季",
+    "n": 81,
+    "share": 3.3,
+    "median_pctile_in_week": 71.0,
+    "examples": [
+     "守望先锋进入数值大崩坏时代！新英雄“血律”试玩！",
+     "守望先锋10月14日热补丁,路霸紧急加强,雾子加强,黑影,血",
+     "【ow新赛季套装】当bro以为第一张已经很顶的时候..."
+    ]
+   },
+   {
+    "theme": "赛事",
+    "n": 466,
+    "share": 19.2,
+    "median_pctile_in_week": 29.1,
+    "examples": [
+     "WBG对阵FLC丨2026守望先锋季中冠军赛小组赛D2",
+     "WBG对阵SSG丨2026守望先锋季中冠军赛淘汰赛",
+     "TM对阵ZETA丨2026守望先锋季中冠军赛 总决赛"
+    ]
+   },
+   {
+    "theme": "回坑/新手/教学",
+    "n": 180,
+    "share": 7.4,
+    "median_pctile_in_week": 52.1,
+    "examples": [
+     "✋🌸《守望先锋》新手英雄教学-生命之梭",
+     "《守望先锋》新手英雄教学-莫伊拉",
+     "《守望先锋》新手英雄教学-“西格玛”"
+    ]
+   },
+   {
+    "theme": "搞笑/整活",
+    "n": 24,
+    "share": 1.0,
+    "median_pctile_in_week": 70.3,
+    "examples": [
+     "👆😅守望先锋新模式有多逆天？",
+     "逆天，kyd四倍dlss玩守望先锋当场震惊，这是ow？",
+     "守望先锋史上最逆天最不恶心人的辅助"
+    ]
+   },
+   {
+    "theme": "活动/福利/外观",
+    "n": 108,
+    "share": 4.4,
+    "median_pctile_in_week": 66.3,
+    "examples": [
+     "守望先锋s4 新皮肤belike：",
+     "当你意识到皮肤是给对面看的",
+     "守望先锋女团皮肤现实中的角色定位一叶的安燃cos无敌了！"
+    ]
+   },
+   {
+    "theme": "AI 生成",
+    "n": 4,
+    "share": 0.2,
+    "median_pctile_in_week": 33.9,
+    "examples": [
+     "我用AI把《守望先锋》PVE页游做出来了！【电脑/手机打开即",
+     "守望先锋开AI挂成本有多低？",
+     "守望先锋ai实战"
+    ]
+   },
+   {
+    "theme": "环境/吐槽",
+    "n": 43,
+    "share": 1.8,
+    "median_pctile_in_week": 66.2,
+    "examples": [
+     "守望先锋10月14日热补丁,路霸紧急加强,雾子加强,黑影,血",
+     "黑影血律削弱，雾子加强！10月14日热补丁调整",
+     "钻石局到底藏了多少炸鱼小号？故氏局局撞上90胜率玩家！"
+    ]
+   }
+  ],
+  "top_videos": [
+   {
+    "bvid": "BV1pNuv6FEbr",
+    "title": "守望先锋s4 新皮肤belike：",
+    "author": "AirPerrow_exe",
+    "official": false,
+    "title_has_ow": true,
+    "play": 1113863,
+    "like": 65296,
+    "pub": "2026-08-11",
+    "age_days": 64,
+    "themes": [
+     "活动/福利/外观"
+    ]
+   },
+   {
+    "bvid": "BV1Kapi6qEcT",
+    "title": "什么叫差20碎片但购买已达上限？",
+    "author": "鸭皮_",
+    "official": false,
+    "title_has_ow": false,
+    "play": 856627,
+    "like": 24826,
+    "pub": "2026-10-10",
+    "age_days": 4,
+    "themes": []
+   },
+   {
+    "bvid": "BV1o3hd6cEvB",
+    "title": "我又来了，合全网唯一一个先锋系列的主播没想到居然又来一个黑武士蓝色",
+    "author": "梨花泪电竞",
+    "official": false,
+    "title_has_ow": false,
+    "play": 736149,
+    "like": 625,
+    "pub": "2026-09-26",
+    "age_days": 18,
+    "themes": []
+   },
+   {
+    "bvid": "BV1pCuc6NEVS",
+    "title": "当你意识到皮肤是给对面看的",
+    "author": "嘉禾zz",
+    "official": false,
+    "title_has_ow": false,
+    "play": 615530,
+    "like": 25519,
+    "pub": "2026-08-04",
+    "age_days": 71,
+    "themes": [
+     "活动/福利/外观"
+    ]
+   },
+   {
+    "bvid": "BV1Kzht6uEY4",
+    "title": "你能帮帮我吗🥺",
+    "author": "国电武术馆馆长",
+    "official": false,
+    "title_has_ow": false,
+    "play": 607788,
+    "like": 18062,
+    "pub": "2026-09-23",
+    "age_days": 21,
+    "themes": []
+   },
+   {
+    "bvid": "BV1WUuN67EyC",
+    "title": "《守望先锋》英雄游戏预览：D.Mon",
+    "author": "守望先锋",
+    "official": true,
+    "title_has_ow": true,
+    "play": 591514,
+    "like": 13140,
+    "pub": "2026-08-08",
+    "age_days": 67,
+    "themes": [
+     "新英雄/新赛季"
+    ]
+   },
+   {
+    "bvid": "BV1dDgU6ZEhv",
+    "title": "这在我们ow里算清淡的了",
+    "author": "C0aLMEMEs",
+    "official": false,
+    "title_has_ow": true,
+    "play": 546221,
+    "like": 41886,
+    "pub": "2026-07-23",
+    "age_days": 83,
+    "themes": []
+   },
+   {
+    "bvid": "BV18Xew65EiS",
+    "title": "日本妹子和塔菲打ow 塔语一出来lulu立马绷不住 你说的是中文吗",
+    "author": "原头圆脑原肚皮",
+    "official": false,
+    "title_has_ow": true,
+    "play": 526709,
+    "like": 25365,
+    "pub": "2026-09-16",
+    "age_days": 28,
+    "themes": []
+   },
+   {
+    "bvid": "BV18quz6XEKu",
+    "title": "当你意识到皮肤自己看不见时",
+    "author": "嘉禾zz",
+    "official": false,
+    "title_has_ow": false,
+    "play": 515246,
+    "like": 14495,
+    "pub": "2026-08-11",
+    "age_days": 64,
+    "themes": [
+     "活动/福利/外观"
+    ]
+   },
+   {
+    "bvid": "BV1ajYo6eEu8",
+    "title": "《越狱》|《守望先锋》血律英雄宣传片",
+    "author": "守望先锋",
+    "official": true,
+    "title_has_ow": true,
+    "play": 514842,
+    "like": 12109,
+    "pub": "2026-09-13",
+    "age_days": 31,
+    "themes": [
+     "新英雄/新赛季"
+    ]
+   },
+   {
+    "bvid": "BV1Lug56fEVn",
+    "title": "那还能怎么办？",
+    "author": "图图堡",
+    "official": false,
+    "title_has_ow": false,
+    "play": 510746,
+    "like": 28526,
+    "pub": "2026-08-12",
+    "age_days": 63,
+    "themes": []
+   },
+   {
+    "bvid": "BV12bgx6yE2L",
+    "title": "曾经风头盖过黑神话的解限机怎么凉了，如今大更新也无人问津？",
+    "author": "懂懂小白鱼",
+    "official": false,
+    "title_has_ow": false,
+    "play": 492810,
+    "like": 8867,
+    "pub": "2026-07-23",
+    "age_days": 83,
+    "themes": [
+     "活动/福利/外观"
+    ]
+   }
+  ]
+ },
+ "official": {
+  "accounts": [
+   {
+    "mid": 1886758040,
+    "code": 0,
+    "name": "守望先锋",
+    "official": {
+     "role": 3,
+     "title": "《守望先锋》官方视频号",
+     "desc": "",
+     "type": 1
+    },
+    "fans": 511038,
+    "archive_count": 315,
+    "fetched_at": "2026-10-15T13:06:07+08:00"
+   },
+   {
+    "mid": 365902357,
+    "code": 0,
+    "name": "守望先锋电竞",
+    "official": {
+     "role": 3,
+     "title": "守望先锋电竞官方账号",
+     "desc": "",
+     "type": 1
+    },
+    "fans": 402477,
+    "archive_count": 1516,
+    "fetched_at": "2026-10-15T13:06:08+08:00"
+   }
+  ],
+  "in_july_sample_since_return": {
+   "1886758040": 15,
+   "365902357": 54
+  },
+  "in_recent_sample": {
+   "1886758040": 31,
+   "365902357": 41
+  },
+  "recent_official_videos": [
+   {
+    "title": "《守望先锋》英雄游戏预览：D.Mon",
+    "mid": 1886758040,
+    "play": 591514,
+    "pub": "2026-08-08"
+   },
+   {
+    "title": "《越狱》|《守望先锋》血律英雄宣传片",
+    "mid": 1886758040,
+    "play": 514842,
+    "pub": "2026-09-13"
+   },
+   {
+    "title": "「圣邪颂歌」| 游戏预览",
+    "mid": 1886758040,
+    "play": 371213,
+    "pub": "2026-10-05"
+   },
+   {
+    "title": "《守望先锋》x LE SSERAFIM | Made My Night 游戏预览",
+    "mid": 1886758040,
+    "play": 319201,
+    "pub": "2026-09-12"
+   },
+   {
+    "title": "《守望先锋》新手英雄教学-“西格玛”",
+    "mid": 1886758040,
+    "play": 244867,
+    "pub": "2026-08-18"
+   },
+   {
+    "title": "WBG对阵FLC丨2026守望先锋季中冠军赛小组赛D2",
+    "mid": 365902357,
+    "play": 233596,
+    "pub": "2026-07-30"
+   },
+   {
+    "title": "《守望先锋》新手英雄教学-莫伊拉",
+    "mid": 1886758040,
+    "play": 229943,
+    "pub": "2026-08-21"
+   },
+   {
+    "title": "《守望先锋》新手英雄教学-“死神”",
+    "mid": 1886758040,
+    "play": 226982,
+    "pub": "2026-08-19"
+   },
+   {
+    "title": "神龙少侠无漾神话皮肤 | 游戏预览",
+    "mid": 1886758040,
+    "play": 225803,
+    "pub": "2026-10-07"
+   },
+   {
+    "title": "《守望先锋》第五赛季：暗红之律 | 赛季预览",
+    "mid": 1886758040,
+    "play": 206336,
+    "pub": "2026-10-06"
+   },
+   {
+    "title": "《守望先锋》英雄游戏预览：血律",
+    "mid": 1886758040,
+    "play": 178572,
+    "pub": "2026-09-30"
+   },
+   {
+    "title": "「圣邪颂歌」限时活动宣传片",
+    "mid": 1886758040,
+    "play": 168700,
+    "pub": "2026-10-03"
+   },
+   {
+    "title": "《守望先锋》新手英雄教学-拉玛刹",
+    "mid": 1886758040,
+    "play": 153355,
+    "pub": "2026-08-18"
+   },
+   {
+    "title": "《守望先锋》新手英雄教学-雾子",
+    "mid": 1886758040,
+    "play": 150303,
+    "pub": "2026-08-21"
+   },
+   {
+    "title": "《守望先锋》新手英雄教学-温斯顿",
+    "mid": 1886758040,
+    "play": 132525,
+    "pub": "2026-10-09"
+   }
+  ]
+ },
+ "comments": {
+  "n": 450,
+  "n_videos": 150,
+  "screen_counts": {
+   "回归/回坑/离开": 2,
+   "新手/入坑": 17,
+   "组队/社交": 23,
+   "环境/匹配": 15,
+   "新内容/改动": 59,
+   "赛事/战队": 7,
+   "福利/付费": 36,
+   "情怀/十年": 8
+  },
+  "n_any_theme": 135,
+  "review": {
+   "n_reviewed": 450,
+   "n_with_signal": 125,
+   "n_non_ow": 24,
+   "screen_hit_no_signal": 59,
+   "signal_missed_by_screen": 49,
+   "theme_counts": {
+    "新内容与平衡": 46,
+    "付费与外观": 25,
+    "新手上手": 22,
+    "角色叙事与配音": 12,
+    "回归/离开与情怀": 11,
+    "环境与匹配": 10,
+    "组队与单排": 8,
+    "赛事与战队": 6
+   },
+   "stance_counts": {
+    "其他（玩梗/闲聊，无需求信号）": 301,
+    "吐槽": 53,
+    "叙述": 24,
+    "其他": 24,
+    "肯定": 18,
+    "玩梗": 14,
+    "建议": 11,
+    "求助提问": 5
+   },
+   "examples": {
+    "角色叙事与配音": [
+     {
+      "cid": "C001",
+      "like": 2304,
+      "stance": "叙述",
+      "excerpt": "我看这黑爪才是正规组织啊，每次都在执行紧张刺激的任务，守望先锋现在天天这个谈恋爱那个谈恋爱的[2025贝拉的冒险_你看这",
+      "video": "《越狱》|《守望先锋》血律英雄宣传片",
+      "note": "剧情方向吐槽"
+     },
+     {
+      "cid": "C306",
+      "like": 1396,
+      "stance": "叙述",
+      "excerpt": "给各位炽粉科普一下， 0:35和0：48向各位成员比心的机器人是《守望先锋》里的反派-鬼神智械。这首合作曲MV想展现的故",
+      "video": "LE SSERAFIM &#x27;Made My Night&#x27; OF",
+      "note": "科普联动 MV 剧情"
+     },
+     {
+      "cid": "C082",
+      "like": 858,
+      "stance": "叙述",
+      "excerpt": "如果你看了官方故事片就会知道： 1.血律就是一个情绪很激动很偏激的人 2.他觉得自己是当地民俗的吸血怪物“阿兹”而不是吸",
+      "video": "血律中配 新旧大招语音对比（附回声版",
+      "note": "看过官方故事片理解角色"
+     },
+     {
+      "cid": "C104",
+      "like": 642,
+      "stance": "叙述",
+      "excerpt": "不过感觉这个人比莫伊拉还邪恶，莫伊拉只是人体实验，而且一视同仁对自己也实验，而这位永葆年轻的方法是直接把人吸干",
+      "video": "谁懂他有多辣，新英雄“血律”",
+      "note": "角色设定讨论"
+     }
+    ],
+    "新内容与平衡": [
+     {
+      "cid": "C069",
+      "like": 1771,
+      "stance": "叙述",
+      "excerpt": "一次补丁毁了飞天午时梦 *S5赛季更新后，神射手期间无法抓住“飞天猫”的救生索",
+      "video": "《守望先锋》新手英雄教学-卡西迪",
+      "note": "补丁细节"
+     },
+     {
+      "cid": "C004",
+      "like": 1425,
+      "stance": "吐槽",
+      "excerpt": "暴雪成功解决了雾子大人过于超模的问题：出一个比雾子大人更逆天的奶妈",
+      "video": "守望先锋进入数值大崩坏时代！新英雄“血律”试玩！",
+      "note": "新辅助比旧强势辅助更强"
+     },
+     {
+      "cid": "C154",
+      "like": 948,
+      "stance": "肯定",
+      "excerpt": "黑影变成奶绝对是最伟大的发明，现在奶味受委屈了不用生闷气了，一个黑影一个莫伊耍起，耍起嘛耍起",
+      "video": "黑影重做试玩 - 野生狗奶来袭",
+      "note": "黑影变奶是最伟大的发明"
+     },
+     {
+      "cid": "C005",
+      "like": 785,
+      "stance": "吐槽",
+      "excerpt": "哇是高貴的百分比傷害呢，針對哪個職責啊好難猜啊",
+      "video": "守望先锋进入数值大崩坏时代！新英雄“血律”试玩！",
+      "note": "百分比伤害针对坦克"
+     }
+    ],
+    "新手上手": [
+     {
+      "cid": "C013",
+      "like": 2553,
+      "stance": "肯定",
+      "excerpt": "终于教点新人该玩的英雄了",
+      "video": "《守望先锋》新手英雄教学-莫伊拉",
+      "note": "官方教学终于教新人该玩的英雄"
+     },
+     {
+      "cid": "C090",
+      "like": 825,
+      "stance": "叙述",
+      "excerpt": "我去，上了一早上课回来居然有这么人看，我fps其他游戏加起来得快有2k小时了，派cs三角洲瓦pubg都玩过，瓦玩的最久上",
+      "video": "新手刚玩十小时感觉这波非常帅遂发b站",
+      "note": "其他 FPS 老玩家被朋友拉入坑，定级黄金五"
+     },
+     {
+      "cid": "C163",
+      "like": 573,
+      "stance": "肯定",
+      "excerpt": "不得不说这官方有东西是真教啊，上次刚学到莫伊拉原来有奶粉和黄球这两个技能，这次又学到了毛妹的盾原来可以给队友",
+      "video": "《守望先锋》新手英雄教学-查莉娅",
+      "note": "官方教学真能学到东西"
+     },
+     {
+      "cid": "C018",
+      "like": 512,
+      "stance": "建议",
+      "excerpt": "TIPS：新手不必追求打出“地狱枪手”奖杯。这个杯在PS上的完成率只有2.60%，在很容易吃到队友增益的日常对局中很难完",
+      "video": "《守望先锋》新手英雄教学-“死神”",
+      "note": "给新手的成就建议"
+     }
+    ],
+    "组队与单排": [
+     {
+      "cid": "C374",
+      "like": 1973,
+      "stance": "叙述",
+      "excerpt": "住电竞酒店打守望第一天就开始写歌骂队友了",
+      "video": "别玩中国人能飞的梗了，这个瘪佬是真玩守望先锋啊！",
+      "note": "打第一天就骂队友"
+     },
+     {
+      "cid": "C090",
+      "like": 825,
+      "stance": "叙述",
+      "excerpt": "我去，上了一早上课回来居然有这么人看，我fps其他游戏加起来得快有2k小时了，派cs三角洲瓦pubg都玩过，瓦玩的最久上",
+      "video": "新手刚玩十小时感觉这波非常帅遂发b站",
+      "note": "其他 FPS 老玩家被朋友拉入坑，定级黄金五"
+     },
+     {
+      "cid": "C439",
+      "like": 810,
+      "stance": "叙述",
+      "excerpt": "一名绝望的单排机动T才能改出来的键位",
+      "video": "哈蒙德大人：侧键近战的段位不超过钻石，f近战的都是帅哥",
+      "note": "单排机动T"
+     },
+     {
+      "cid": "C047",
+      "like": 408,
+      "stance": "玩梗",
+      "excerpt": "现在黑影最大的缺点就是队友会应激，经常奶队友的时候，队友转头给我一梭子",
+      "video": "【Sunzo】实战新辅助黑影：大招夸张 | 比血律厉害太多 | 奶量比你们想象中",
+      "note": "新黑影奶队友被队友误伤"
+     }
+    ],
+    "回归/离开与情怀": [
+     {
+      "cid": "C373",
+      "like": 1825,
+      "stance": "叙述",
+      "excerpt": "现在这个节骨眼他要能打一个星期守望说明热爱抵万难了[笑哭]",
+      "video": "别玩中国人能飞的梗了，这个瘪佬是真玩守望先锋啊！",
+      "note": "热爱抵万难"
+     },
+     {
+      "cid": "C316",
+      "like": 456,
+      "stance": "吐槽",
+      "excerpt": "打十把排位就能知道这游戏为什么凉[汤圆]",
+      "video": "我心中最可惜的游戏守望先锋，他怎么凉的？如今怎么样了？",
+      "note": "打十把排位就知道为什么凉"
+     },
+     {
+      "cid": "C110",
+      "like": 393,
+      "stance": "叙述",
+      "excerpt": "2026年度最佳C：死怨🥇 年度最佳奶：耄耋🐱 年度最佳T：金鱼🐟 最佳剧情故事推进：M雷😎啊啊啊啊啊啊啊啊2016年就",
+      "video": "【守望先锋】继血律之后最后一位新英雄也公布了",
+      "note": "2016 年 CG 埋下的角色十年后登场"
+     },
+     {
+      "cid": "C238",
+      "like": 377,
+      "stance": "叙述",
+      "excerpt": "这把就能看出炫狗的天赋有多高，离开虽然很稳，但是打不出很多这么秀的操作[笑哭][笑哭]",
+      "video": "【炫神】回归守望先锋！一手秒刀流源氏震慑全场！",
+      "note": "主播回归"
+     }
+    ],
+    "环境与匹配": [
+     {
+      "cid": "C442",
+      "like": 2268,
+      "stance": "肯定",
+      "excerpt": "鸭皮太谦虚了，现在已经算ow一哥了吧[笑哭]ow圈子没啥热度，你做成这样已经很不容易了，鸭皮不搞代练在ow主播里算一股清",
+      "video": "做了一年守望内容，我准备....",
+      "note": "称赞主播不搞代练，侧面说明代练常见"
+     },
+     {
+      "cid": "C374",
+      "like": 1973,
+      "stance": "叙述",
+      "excerpt": "住电竞酒店打守望第一天就开始写歌骂队友了",
+      "video": "别玩中国人能飞的梗了，这个瘪佬是真玩守望先锋啊！",
+      "note": "打第一天就骂队友"
+     },
+     {
+      "cid": "C316",
+      "like": 456,
+      "stance": "吐槽",
+      "excerpt": "打十把排位就能知道这游戏为什么凉[汤圆]",
+      "video": "我心中最可惜的游戏守望先锋，他怎么凉的？如今怎么样了？",
+      "note": "打十把排位就知道为什么凉"
+     },
+     {
+      "cid": "C181",
+      "like": 391,
+      "stance": "叙述",
+      "excerpt": "玩o打久了就明白不是所有人都配赢的，所以遇到赢不了的局该摆就摆",
+      "video": "守望从白银到大师之后总结了排位最难受的 7 个问题",
+      "note": "遇到赢不了的局该摆就摆"
+     }
+    ],
+    "付费与外观": [
+     {
+      "cid": "C387",
+      "like": 3089,
+      "stance": "肯定",
+      "excerpt": "终于有新皮肤了！还是一套！[守望先锋_卖萌]",
+      "video": "「圣邪颂歌」| [破坏球]隐藏皮肤游戏预览",
+      "note": "终于有新皮肤"
+     },
+     {
+      "cid": "C274",
+      "like": 2063,
+      "stance": "吐槽",
+      "excerpt": "头一次见到充钱活动还能有上限的[来古-震撼]",
+      "video": "什么叫差20碎片但购买已达上限？",
+      "note": "充值活动还有上限"
+     },
+     {
+      "cid": "C213",
+      "like": 510,
+      "stance": "玩梗",
+      "excerpt": "别说神话源氏了，马有失足，人有失蹄。我也是有成功的时候，比如我投资的铁拳眼镜蛇[守望先锋十周年表情包_有人在家吗][守望",
+      "video": "新赛季囤货指南！跟着鸭皮买！别墅靠大海！",
+      "note": ""
+     },
+     {
+      "cid": "C431",
+      "like": 501,
+      "stance": "吐槽",
+      "excerpt": "感觉直播间真得让你坐吧，这我觉得根本就NPC，别的武器至少特殊动作和自己武器相关，这不知道在哪掏出来个匕首在那硬转[热]",
+      "video": "索杰恩的神话枪皮我建议破碎枪男都来一个！看到最后就知道了！",
+      "note": "神话枪皮不值"
+     }
+    ],
+    "赛事与战队": [
+     {
+      "cid": "C376",
+      "like": 2021,
+      "stance": "肯定",
+      "excerpt": "ow职业选手是我见过的对夸张的，cs的集锦都没这么夸张，在一大堆机动能力报表、头线大小不一、头大小不一的英雄中准确的爆头",
+      "video": "守望先锋历史上最伟大的操作型选手",
+      "note": "职业选手操作夸张"
+     },
+     {
+      "cid": "C364",
+      "like": 1249,
+      "stance": "肯定",
+      "excerpt": "救世主一样的孙总！wbg真的不一样了，斗兽场全新阵容都有发挥！",
+      "video": "WBG对阵FLC丨2026守望先锋季中冠军赛小组赛D2",
+      "note": "WBG 新阵容"
+     },
+     {
+      "cid": "C365",
+      "like": 757,
+      "stance": "玩梗",
+      "excerpt": "@niko:借一分，一个月后OW分部还 @someone：niko你做人真的可以",
+      "video": "WBG对阵FLC丨2026守望先锋季中冠军赛小组赛D2",
+      "note": ""
+     },
+     {
+      "cid": "C360",
+      "like": 253,
+      "stance": "叙述",
+      "excerpt": "这次我们和@AG守望先锋 一拍即合！直接把冷神拉过来组成了超没人气天团 FW Humans 飞舞男孩！ 这次去巴黎作战的",
+      "video": "我们守望先锋有自己的猛男舞团啦！",
+      "note": "AG 选手参与 UP 主企划"
+     }
+    ]
+   }
+  }
+ },
+ "official_pctile": {
+  "main": {
+   "n": 18,
+   "median": 96.0
+  },
+  "esports": {
+   "n": 25,
+   "median": 69.1
+  },
+  "ugc": {
+   "n": 2387,
+   "median": 49.2
+  }
+ },
+ "returning_titles": {
+  "n": 18,
+  "of": 3760,
+  "titles": [
+   {
+    "title": "新老玩家皮肤审美大赏",
+    "play": 284012,
+    "pub": "2026-08-01"
+   },
+   {
+    "title": "内外网全挨骂？进化皮活动到底是好是坏？十年老玩家分析锐评该系列活动！【守望先锋】",
+    "play": 109542,
+    "pub": "2026-10-05"
+   },
+   {
+    "title": "源氏新手皮肤vs老玩家皮肤",
+    "play": 80227,
+    "pub": "2026-10-09"
+   },
+   {
+    "title": "【炫神】回归守望先锋！一手秒刀流源氏震慑全场！",
+    "play": 54281,
+    "pub": "2026-07-28"
+   },
+   {
+    "title": "要是源氏威能有回归基本功就好了",
+    "play": 40145,
+    "pub": "2026-09-23"
+   },
+   {
+    "title": "只有守望老玩家才能看懂",
+    "play": 36537,
+    "pub": "2026-09-18"
+   },
+   {
+    "title": "当年守望先锋的老玩家们现在都在干什么呢？",
+    "play": 16709,
+    "pub": "2026-09-02"
+   },
+   {
+    "title": "【炫神】我回归啦！（战网守望先锋）",
+    "play": 15556,
+    "pub": "2026-10-10"
+   },
+   {
+    "title": "总有人说老玩家排斥新人",
+    "play": 11084,
+    "pub": "2026-10-04"
+   },
+   {
+    "title": "《守望先锋新赛季奖励活动全介绍》登录领传奇进化皮服抽奖+最新游戏幻梦都市所有新老玩家可参与新奖池福利及活动页面打不开福利全介绍！OW新活动",
+    "play": 10004,
+    "pub": "2026-08-12"
+   },
+   {
+    "title": "《射击游戏の小曲》，老玩家看了直接__！",
+    "play": 7660,
+    "pub": "2026-09-11"
+   },
+   {
+    "title": "MN3回归owcs依旧恐怖瞄准",
+    "play": 4232,
+    "pub": "2026-09-29"
+   },
+   {
+    "title": "[日本owcs] 99DIVINE vs VARREL MN3回归首秀 枪男对决",
+    "play": 1644,
+    "pub": "2026-09-21"
+   },
+   {
+    "title": "国服回归入坑玩家源氏水平",
+    "play": 1449,
+    "pub": "2026-09-07"
+   },
+   {
+    "title": "【翼岚】作为一个回坑玩家，我只是按住了左键",
+    "play": 583,
+    "pub": "2026-09-01"
+   },
+   {
+    "title": "当一个8年没玩ow的牢玩家回归的第一把.....",
+    "play": 441,
+    "pub": "2026-08-11"
+   },
+   {
+    "title": "[日本owcs] ENTER FORCE.36 vs  Lazuli  Fearless回归首秀 依旧威风不减",
+    "play": 430,
+    "pub": "2026-09-21"
+   },
+   {
+    "title": "就是为了死怨进化皮回坑",
+    "play": 294,
+    "pub": "2026-10-14"
+   }
+  ]
+ },
+ "official_tutorials": {
+  "n": 17,
+  "items": [
+   {
+    "title": "《守望先锋》新手教学-特工入门篇",
+    "play": 79583,
+    "pub": "2026-08-14"
+   },
+   {
+    "title": "《守望先锋》新手教学-攻防博弈篇",
+    "play": 95359,
+    "pub": "2026-08-14"
+   },
+   {
+    "title": "《守望先锋》新手英雄教学-拉玛刹",
+    "play": 153355,
+    "pub": "2026-08-18"
+   },
+   {
+    "title": "《守望先锋》新手英雄教学-“西格玛”",
+    "play": 244867,
+    "pub": "2026-08-18"
+   },
+   {
+    "title": "《守望先锋》新手英雄教学-埃姆雷",
+    "play": 120765,
+    "pub": "2026-08-19"
+   },
+   {
+    "title": "《守望先锋》新手英雄教学-“死神”",
+    "play": 226982,
+    "pub": "2026-08-19"
+   },
+   {
+    "title": "《守望先锋》新手英雄教学-雾子",
+    "play": 150303,
+    "pub": "2026-08-21"
+   },
+   {
+    "title": "《守望先锋》新手英雄教学-莫伊拉",
+    "play": 229943,
+    "pub": "2026-08-21"
+   },
+   {
+    "title": "《守望先锋》新手英雄教学-卡西迪",
+    "play": 113475,
+    "pub": "2026-10-08"
+   },
+   {
+    "title": "《守望先锋》新手英雄教学-“探奇”",
+    "play": 66348,
+    "pub": "2026-10-08"
+   },
+   {
+    "title": "《守望先锋》新手英雄教学-“索杰恩”",
+    "play": 62643,
+    "pub": "2026-10-08"
+   },
+   {
+    "title": "《守望先锋》新手英雄教学-温斯顿",
+    "play": 132525,
+    "pub": "2026-10-09"
+   },
+   {
+    "title": "《守望先锋》新手英雄教学-“骇灾”",
+    "play": 61742,
+    "pub": "2026-10-09"
+   },
+   {
+    "title": "《守望先锋》新手英雄教学-查莉娅",
+    "play": 69437,
+    "pub": "2026-10-09"
+   },
+   {
+    "title": "《守望先锋》新手英雄教学-安娜",
+    "play": 81741,
+    "pub": "2026-10-10"
+   },
+   {
+    "title": "《守望先锋》新手英雄教学-巴蒂斯特",
+    "play": 49081,
+    "pub": "2026-10-10"
+   },
+   {
+    "title": "《守望先锋》新手英雄教学-朱诺",
+    "play": 62311,
+    "pub": "2026-10-10"
+   }
+  ]
+ },
+ "official_news_window": 26,
+ "official_news_crackdown_posts": 9,
+ "fetch_summary": [
+  {
+   "source": "国服官网新闻",
+   "status": "完成",
+   "ok": true,
+   "detail": "108 条列表项，31 篇正文"
+  },
+  {
+   "source": "OverFast API（非官方）",
+   "status": "完成",
+   "ok": true,
+   "detail": "4 个接口"
+  },
+  {
+   "source": "Liquipedia（第三方）",
+   "status": "完成",
+   "ok": true,
+   "detail": "4 个页面"
+  },
+  {
+   "source": "B站搜索 · replica",
+   "status": "完成",
+   "ok": true,
+   "detail": "5 组检索，5,000 次命中，250 页"
+  },
+  {
+   "source": "B站搜索 · extension",
+   "status": "完成",
+   "ok": true,
+   "detail": "5 组检索，2,000 次命中，100 页"
+  },
+  {
+   "source": "B站搜索 · 按发布时间倒序（已放弃）",
+   "status": "放弃",
+   "ok": false,
+   "detail": "「守望先锋」50 页只回溯约 1–2 天，覆盖不了窗口；命中已删除"
+  },
+  {
+   "source": "B站搜索 · weekly",
+   "status": "完成",
+   "ok": true,
+   "detail": "65 组检索，3,867 次命中，194 页"
+  },
+  {
+   "source": "B站同一视频面板",
+   "status": "完成",
+   "ok": true,
+   "detail": "660 条目标，找到 349，未找到 311，请求错误 0；按标题搜索第一页、bvid 精确匹配，读搜索卡片计数"
+  },
+  {
+   "source": "B站热评",
+   "status": "完成",
+   "ok": true,
+   "detail": "150/150 个视频，450 条评论；首轮选样漏了清洗规则（150 个视频仅 69 个是 OW），已修正重跑"
+  },
+  {
+   "source": "核验页面（S14 地方媒体稿）",
+   "status": "完成",
+   "ok": true,
+   "detail": "已存档"
+  },
+  {
+   "source": "B站官方号完整投稿列表",
+   "status": "失败",
+   "ok": false,
+   "detail": "space/arc/search 匿名访问返回 -352 / -799 风控，未取得（F01）"
+  },
+  {
+   "source": "B站视频详情接口",
+   "status": "失败",
+   "ok": false,
+   "detail": "view 接口当日持续 412；面板改用按标题检索、bvid 精确匹配"
+  }
+ ]
+}
