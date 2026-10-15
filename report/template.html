@@ -89,7 +89,7 @@ svg .oxn{font-family:'Saira Condensed',sans-serif;font-weight:600}
 .find{background:linear-gradient(180deg,var(--panel),var(--panel2));clip-path:var(--chamfer);padding:22px 26px;position:relative}
 .find .idx{font-family:'Saira Condensed',sans-serif;font-size:30px;font-weight:700;font-style:italic;color:transparent;-webkit-text-stroke:1px var(--org);line-height:1;float:left;margin:2px 16px 0 0}
 .find h3{margin-bottom:10px}
-.find dl{display:grid;grid-template-columns:96px 1fr;gap:6px 14px;font-size:13.5px;clear:both}
+.find dl{display:grid;grid-template-columns:112px 1fr;gap:6px 14px;font-size:13.5px;clear:both}
 .find dt{color:var(--dim)}
 .find dd{color:var(--mut)}
 .find dd b{color:var(--txt);font-weight:500}
@@ -255,7 +255,7 @@ function render(){
 
   // 01 核心发现
   h+=sec('find','01','核心发现', D.leads.find, `<div class="finds">${D.findings.map((f,i)=>`<article class="find"><div class="idx num">${String(i+1).padStart(2,'0')}</div><h3>${esc(f.title)} ${ev(f.strength)}</h3><dl>
-    <dt>观察到的事实</dt><dd>${srcRefs(f.fact)}</dd><dt>解释</dt><dd>${esc(f.interpretation)}</dd><dt>其他可能</dt><dd>${esc(f.alternatives)}</dd>
+    <dt>事实与依据</dt><dd>${srcRefs(f.fact)}</dd><dt>解释与其他可能</dt><dd>${esc(f.reading)}</dd>
     <dt>对营销的意义</dt><dd>${esc(f.meaning)}</dd><dt>下一步</dt><dd>${esc(f.next)}</dd></dl></article>`).join('')}</div>`);
 
   // 02 时间线

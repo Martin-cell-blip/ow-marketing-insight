@@ -58,8 +58,10 @@ const children = [
   p("文中 S01–S17 为已核验来源编号、F01–F02 为失败记录，明细见同目录 Excel「来源与证据」。", { size: 18, color: "6B7280" }),
   ...D.findings.flatMap((f, i) => [
     runs([[`${i + 1}. ${f.title}`, true], [`　【${f.strength}】`, true, f.strength === "事实" ? "0E7490" : "B45309"]], { spacing: { before: 120, after: 60 } }),
-    runs([["事实：", true], [f.fact.replace(/（S\d{2}[^）]*）|（F\d{2}）/g, "")]]),
+    runs([["事实与依据：", true], [f.fact]]),
+    runs([["解释与其他可能：", true], [f.reading]]),
     runs([["对营销的意义：", true], [f.meaning]]),
+    runs([["下一步：", true], [f.next]]),
   ]),
 
   h("三、旧结论的变化", HeadingLevel.HEADING_1),

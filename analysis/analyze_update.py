@@ -226,6 +226,11 @@ def main() -> None:
                            "median_pctile_in_week": round(st.median(ps), 1) if ps else None,
                            "examples": [r["title"][:30] for r in sorted(g, key=lambda r: -pctile[r["bvid"]])[:3]]})
     m["recent"]["themes"] = theme_rows
+    # 赛事类里有多少是具体对阵/比赛日/选手第一视角（标题粗分，用于核对「以逐场比赛视频为主」）
+    esp_rx = THEMES["赛事"]
+    match_rx = re.compile(r"对阵|vs|D\d|第.日|小组赛|淘汰赛|常规赛|回放|全场|BO\d|比赛日|第一视角", re.I)
+    esp = [r for r in wk.values() if esp_rx.search(r["title"])]
+    m["recent"]["esports_match_titles"] = {"n_esports": len(esp), "n_match_like": sum(1 for r in esp if match_rx.search(r["title"]))}
     m["recent"]["top_videos"] = [
         {"bvid": r["bvid"], "title": r["title"], "author": r["author"], "official": r["mid"] in OFFICIAL_MIDS,
          "title_has_ow": title_has_ow(r),

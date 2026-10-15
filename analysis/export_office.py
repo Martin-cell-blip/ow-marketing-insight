@@ -73,9 +73,9 @@ for k, label in enumerate(["保留", "修正", "撤下"]):
     ws.cell(r, 2, f'=COUNTIF(B{r0 + 1}:B{last},"{label}")').font = FONT
 
 # 3. 核心发现
-sheet(wb, "核心发现", [("#", 4), ("发现", 36), ("证据强度", 10), ("观察到的事实", 70), ("解释", 50), ("其他可能", 50),
+sheet(wb, "核心发现", [("#", 4), ("发现", 36), ("证据强度", 10), ("事实与依据", 70), ("解释与其他可能", 60),
                      ("对营销的意义", 50), ("下一步", 40)],
-      [[i + 1, f["title"], f["strength"], f["fact"], f["interpretation"], f["alternatives"], f["meaning"], f["next"]]
+      [[i + 1, f["title"], f["strength"], f["fact"], f["reading"], f["meaning"], f["next"]]
        for i, f in enumerate(D["findings"])])
 
 # 4. 三个内容选题
