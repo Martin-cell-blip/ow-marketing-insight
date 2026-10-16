@@ -269,7 +269,7 @@ function render(){
   const C=D.composition;
   h+=sec('sample','04','检索样本不是总量：两次抓取比什么、不比什么', D.leads.composition, `<div class="card"><figure><div data-chart="comp"></div><figcaption>${D.charts.composition_caption}</figcaption></figure>
     <details><summary>查看数据</summary><div class="inner">${table([{h:'发布月份'},{h:'7 月样本',n:1},{h:'10 月样本',n:1}], C.by_pub_month.map(d=>[d.m,d.july,d.replica]))}</div></details>
-    <div class="callout warn"><span aria-hidden="true">⚠</span><div><b>口径：</b>${esc(D.charts.composition_note)}</div></div></div>`);
+    ${D.charts.composition_note ? `<div class="callout warn"><span aria-hidden="true">⚠</span><div><b>口径：</b>${esc(D.charts.composition_note)}</div></div>` : ''}</div>`);
 
   // 05 面板
   h+=sec('panel','05','同一视频：累计播放会一直长', D.leads.panel, `<div class="card"><figure><div data-chart="panel"></div><figcaption>${D.charts.panel_caption}</figcaption></figure>

@@ -68,7 +68,7 @@ const children = [
   p("先核验 2026-07 版报告，不预设旧建议正确。下表为核验结果（「撤下」= 证据无法回溯或口径错误）。", { size: 19, color: "4B5563" }),
   table([["7 月报告的说法", 3000], ["结果", 900], ["依据", 5126]], D.corrections.map(c => [c.old, c.status, c.why])),
 
-  h("四、优先营销建议（未经验证的判断）", HeadingLevel.HEADING_1),
+  h("四、优先营销建议（待验证）", HeadingLevel.HEADING_1),
   runs([[P.title, true]]),
   p(P.what),
   runs([["北极星指标：", true], [`${P.north_star.name}。${P.north_star.definition}`]]),
